@@ -258,14 +258,14 @@ nav .user-account span:nth-child(1){
 .user-account .account__link{
     position: absolute;
     background-color: rgba(255,255,255);
-    top: 55px;
+    top: 52px;
     box-sizing: border-box;
     right: -19px;
     box-shadow: 0 0 10px rgb(43, 41, 41);
     border-radius: 4px;
     z-index: 2;
     display: none;
-    transition: all .2 linear;
+    transition: all .2s linear;
 }
 .user-account .account__link::before{
     content: '';
@@ -273,6 +273,7 @@ nav .user-account span:nth-child(1){
     border-bottom: 12px solid white;
     position: absolute;
     top: -21px;
+  
 }
 
 .account__link li, .downto__link li{
@@ -283,16 +284,18 @@ nav .user-account span:nth-child(1){
 
 .account__link li a, .downto__link li a{
     display: block;
-    font-size: 16px;
+    text-align: start;
+    font-size: 12px;
     color: rgb(83, 82, 82);
-    padding: 3px 29px;
+    padding: 5px 29px;
     text-decoration: none;
 }
 
 
-.account__link li a:hover, .downto__link li a:hover{
+.account__link li a:hover{
     color: black;
     background-color: rgba(0, 123, 255, 0.25);
+    transition: all .3s linear;
 }
 
 .user-account:hover .account__link{
@@ -302,9 +305,9 @@ nav .user-account span:nth-child(1){
 .account__link .downto__link{
     position: absolute;
     background-color: rgba(255,255,255);
-    top: 55px;
+    bottom: -20px;
     box-sizing: border-box;
-    right: -100%;
+    right: -88%;
     box-shadow: 0 0 10px rgb(43, 41, 41);
     border-radius: 4px;
     display: none;
@@ -322,7 +325,12 @@ nav .user-account span:nth-child(1){
 
 .active__downto:hover .downto__link {
     display: block;
-   }
+ }
+.active__downto b{
+     position: absolute;
+     right: 15%;
+    text-align: end;
+ }
 
 
 
@@ -637,11 +645,13 @@ color: var(--dark-blue-color)
 /*============ MAIN WORKAREA ==============*/
 .main-workarea{
    display: flex;
+   overflow-x: scroll;
 
 }
 .main-workarea .workarea__card{
     width: 220px;
     height: 100vh;
+    flex-shrink: 0;
     border-left: 1px dashed white;
 }
 .main-workarea .workarea__card:hover .plus_area{
@@ -663,7 +673,7 @@ color: var(--dark-blue-color)
     border-left: 18px solid transparent;
     transform: rotate(90deg);
 }
-.workarea__card .workarea__card::before{
+/* .workarea__card .workarea__card::before{
     content: '';
     position: absolute;
     top: 0;
@@ -671,12 +681,17 @@ color: var(--dark-blue-color)
     height: 100%;
     width: 2px;
 
-}
-.workarea__card:nth-child(1) .workarea__card__header {
+} */
+
+.workarea__card .workarea__card__header {
     border-left: 1px solid #00C4FB;
     background-color: #00C4FB;
+    border-radius: 0 15px 15px 0;
 }
-.workarea__card:nth-child(1) .workarea__card__header::before{
+.main-work-cards{
+    display: flex;
+}
+/* .workarea__card:nth-child(1) .workarea__card__header::before{
     background-color: #00C4FB;
 }
 
@@ -715,12 +730,12 @@ color: var(--dark-blue-color)
 }
 .workarea__card:nth-child(6) .workarea__card__header::before{
     background-color: #9F0037;
-}
+} */
 .workarea__card .workarea__card__header:hover .plus_area{
     background-color: white;
 }
 
-.top__transparent.blue{
+/* .top__transparent.blue{
     border-bottom: 13px solid #00C4FB;
 }
 .top__transparent.green{
@@ -737,7 +752,7 @@ color: var(--dark-blue-color)
 }
 .top__transparent.darkpink{
     border-bottom: 13px solid #9F0037;
-}
+} */
 
 
 .main-workarea .workarea__title{
