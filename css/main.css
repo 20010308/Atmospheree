@@ -265,7 +265,7 @@ nav .user-account span:nth-child(1){
     border-radius: 4px;
     z-index: 2;
     display: none;
-    transition: all .2 linear;
+    transition: all .2s linear;
 }
 .user-account .account__link::before{
     content: '';
@@ -338,6 +338,159 @@ nav .clock:hover,
 /*========== NAVBAR BUTTONS ==========*/
 .buttons__type{
     display: flex;
+
+
+}
+.buttons__type .dropdown .dropdown-menu{
+    width: 300px!important;
+    margin-right: 150px!important;
+    margin-top: 15px!important;
+    background-color: #E0EEEE;
+    border-radius: 20px;
+    padding: 15px;
+    transition: 0.5s all linear;
+}
+.buttons__type .dropdown-toggle:nth-child(2){
+}
+.bgwhite{
+    padding: 5px;
+    background-color: white;
+    border-radius: 13px;
+}
+.bgwhite:hover{
+    transform: scale(1.1);
+    transform: translateY(-5px);
+}
+.bgwhite h6{
+    font-size: 16px;
+    color: black;
+}
+.bgwhite p{
+    font-size: 11px;
+    color: black;
+    text-decoration: dotted;
+}
+.bgblue{
+    padding: 15px;
+    background-color: #14BFD5;
+    border-radius: 13px;
+}
+.bgblue:hover{
+    transform: scale(1.1);
+    transform: translateY(-5px);
+}
+.bgblue h6{
+    font-size: 16px;
+    color: black;
+}
+.bgblue p{
+    font-size: 11px;
+    color: black;
+    text-decoration: dotted;
+}
+.fa-users{
+    color: white;
+}
+.bggrey{
+    padding: 5px;
+    background-color: rgba(194, 197, 202, 0.47);
+    border-radius: 13px;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 12px;
+}
+.bggrey1{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgba(194, 197, 202, 0.47);
+    border-radius: 13px;
+    margin-top: 10px;
+    margin-right: 7px;
+}
+.bggrey1 p{
+    font-size: 11px;
+}
+.bggrey:hover{
+    transform: scale(1.1);
+    transform: translateY(-5px);
+    background-color: white;
+}
+.bggrey p{
+    font-size: 11px;
+}
+
+.bggrey h6{
+    font-size: 12px;
+}
+.bggrey .bg-white{
+     font-size: 10px;
+     width: 65px;
+     height: 16px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 13px;
+     padding: 5px;
+     margin-top: 5px;
+     box-shadow: 0 0 3px grey;
+ }
+.bgblue .bg-white{
+    font-size: 10px;
+    width: 65px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 13px;
+    padding: 5px;
+    margin-top: 5px;
+    box-shadow: 0 0 3px grey;
+}
+.box{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E0E0E0;
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button button{
+    border-radius: 17px;
+    font-size: 12px;
+}
+.rocket{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E0E0E0;
+}
+.users{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(93, 99, 255, 0.44);
+}
+.phone{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #E0E0E0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 button.buy__paket, 
 button.invite{
@@ -352,6 +505,7 @@ button.invite{
     transition: var(--tras-position);
     margin-right: 14px;
 }
+
 button.invite{
     background-color: var(--blue-color);
 }

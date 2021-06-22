@@ -65,7 +65,7 @@ function AddByTimeList(){
 }
 
 function deleteByTimeTask(index) {
-    console.log(index)
+    console.log(index);
     byTimeToDo.splice(index, 1);
     drawByTime();
 }
