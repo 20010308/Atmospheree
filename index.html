@@ -72,17 +72,14 @@
                         <span><i class="fas fa-user"></i></span>
                         <span>Account</span>
                         <span>&#9662;</span>
-                        <ul class="account__link">
-                            <li><a href="#">fdsfdsfs</a></li>
-                            <li><a href="#">vcxvfvsd</a></li>
-                            <li><a href="#" class="active__downto">trrefds ></a></li>
-                            <ul class="downto__link">
-                                <li><a href="#">dfdsfsd</a></li>
-                                <li><a href="#">bvnvnvb</a></li>
-                                <li><a href="#">nbnvbbb</a></li>
-                                <li><a href="#">uyutiyu</a></li>
-                            </ul>
-                            <li><a href="#">fdsfdsfs</a></li>
+                        <ul class="account__link mt-2">
+                            <li><a href="#">Моя странитца</a></li>
+                            <li><a href="#">Темы оформления</a></li>
+                            <li><a href="#">Моя страница Битрикс 24.Нетворк</a></li>
+                            <li><a href="#">Настройка уведомлений</a></li>
+                            <li><a href="#">Расширить тариф</a></li>
+                            <li><a href="#">Расширения</a></li>
+                            <li><a href="#">Выйти</a></li>
                         </ul>
                     </div>
 
@@ -99,7 +96,7 @@
                             Купить тариф
                             <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-menu w-100">
+                        <ul class="dropdown-menu dropdownmenu w-100">
                             <li><a href="#" class="text-decoration-none">
 
                                 <div class="d-flex bgwhite justify-content-between">
@@ -144,22 +141,24 @@
                                 </div>
 
                                 <div class="d-flex">
-                                    <div class="bggrey1 px-1 text-center">
+                                    <div class="bggrey px-1 text-center">
                                         <div class="phone d-block mx-auto"><span class="fa fa-1x fa-phone"></span></div>
                                         <div class="p-2">
                                             <p class="mb-0 text-dark">Заказать внедрение</p>
                                         </div>
                                     </div>
                                     <div class="bggrey text-center">
-                                        <div class="phone d-block mx-auto"><a href="#" class="fa fa-window-close-o"
-                                                                              aria-hidden="true"></a></div>
+                                        <div class="phone d-block mx-auto">
+                                            <img src="assets/icons/email.png" height="15px" width="15px" alt="Error">
+                                        </div>
                                         <div class="p-1">
                                             <p class="mb-0 text-dark">Поддержка</p>
                                         </div>
                                     </div>
                                     <div class="bggrey text-center">
-                                        <div class="phone d-block mx-auto"><a href="#" class="fa fa-window-close-o"
-                                                                              aria-hidden="true"></a></div>
+                                        <div class="phone d-block mx-auto">
+                                            <img src="assets/icons/contract.png" width="15px" height="15px" alt="Error">
+                                        </div>
                                         <div class="p-1">
                                             <p class="mb-0 text-dark">Покупки и документы</p>
                                         </div>
@@ -167,6 +166,7 @@
                                 </div>
 
                             </a></li>
+                        </ul>
                     </div>
 
                     <div class="dropdown">
@@ -178,16 +178,6 @@
                         <ul class="dropdown-menu">
                             <li><a href="#" class="text-decoration-none">
                                 <div class="bgblue">
-<!--                                    <div class="users">-->
-<!--                                        <img class=""-->
-<!--                                            src=""-->
-<!--                                            alt="Error"></span>-->
-<!--                                    </div>-->
-<!--                                    <div class="">-->
-<!--                                        <h6 class="mb-0 text-white">Бесплатный</h6>-->
-<!--                                        <p class="mb-0 text-white">зачем расширять тариф</p>-->
-<!--                                    </div>-->
-<!--                                    <div class="bg-white"><a href="#" class="text-dark text-decoration-none">Подключит</a>-->
                                     <div class="users mb-3 mx-auto">
                                         <i class="fa fa-users" aria-hidden="true"></i>
                                     </div>
@@ -196,13 +186,35 @@
                                             <h6 class="text-white mb-0">Бесплатный</h6>
                                             <p class="mb-0 text-white">зачем расширять тариф</p>
                                         </div>
-                                        <div class="bg-white mt-2"><a href="#" class="text-dark text-decoration-none">+Подключит</a>
-
+                                        <div class="bg-white mt-2">
+                                            <a href="#" class="text-dark text-decoration-none">+Подключит</a>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-around align-items-center">
+                                    <div class="struktura px-4">
+                                        <span class="icon icon-structure d-block mx-auto"></span>
+                                        <h6>Структура</h6>
+                                        <p class="">Настроить</p>
+                                    </div>
+                                    <div class="sotrudnik">
+                                        <div class="d-flex">
+                                            <img class="mr-2 mt-2" src="assets/icons/user.png" alt="Error">
+                                            <div class="">
+                                                <h6>Сотрудники</h6>
+                                                <p class="text-black-50 mb-0">Сотрудников : 1</p>
+                                            </div>
+                                        </div>
+                                        <div class="border mt-3"></div>
+                                        <div class="text-center">
+                                            <p class="text-black-50">Неограниченно сотрудников</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </a></li>
                         </ul>
                     </div>
+                </div>
             </nav>
 
             <div class="menu_nav_items">
@@ -253,12 +265,40 @@
                     <span class="fas fa-search font-weight-light"></span>
                 </div>
 
-                <button class="font-opensans-semibold">Общее <span>&#9662;</span></button>
-                <button><i class="fas fa-cog"></i></button>
+                <div class="obshee position-relative">
+                    <button class="font-opensans-semibold">Общее <span>&#9662;</span></button>
+                    <div class="card">
+                        <div class="card-body p-2">
+                            <a href="#" class="text-dark d-block mb-2 text-decoration-none">Общее</a>
+                            <a href="#" class="text-dark text-decoration-none">Воронки и тунели продаж</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nastroy position-relative">
+                    <button><i class="fas fa-cog"></i></button>
+                    <div class="card">
+                        <div class="card-body p-2">
+                            <a href="#" class="d-block mb-2 text-decoration-none text-black-50">Настройка канбана</a>
+                            <a href="#" class="d-block mb-2 text-decoration-none text-black-50">Миграция из других CRM</a>
+                            <a href="#" class="d-block mb-2 text-decoration-none text-black-50">Отраслевые сценарии</a>
+                            <a href="#" class="d-block mb-2 text-decoration-none text-black-50">Режим работы СRM</a>
+                            <a href="#" class="d-block mb-2 text-decoration-none text-black-50">Режим работы с заказами</a>
+                            <a href="#" class="d-block text-decoration-none text-black-50">Показать блок Контакт центра</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="addition_contract">
                     <button class="font-opensans-semibold">Добавить сделку</button>
                     <div class="ver__line"></div>
-                    <button>&#9662;</button>
+                    <div class="dobavit position-relative">
+                        <button>&#9662;</button>
+                        <div class="card">
+                            <div class="card-body p-2">
+                                <a class="text-black-50 text-decoration-none mb-2 d-block" href="#">Добавит сделку</a>
+                                <a class="text-black-50 text-decoration-none" href="#">Генератор продаж</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
@@ -269,10 +309,18 @@
                 <p class="font-opesans-regular">Нет сделок, требующих оперативной реакции</p>
 
                 <div class="maintitle-sections">
-                    <div class="button__group btn-group">
+                    <div class="button__group position-relative btn-group">
                         <button class="font-opensans-semibold h-auto">Расширения</button>
                         <button
-                                class="font-opensans-semibold"><span>&#9662;</span></button>
+                                class="font-opensans-semibold"><span>&#9662;</span>
+                        </button>
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="#" class="text-decoration-none d-block text-dark">Выбрат базу знаний</a>
+                                <a href="#" class="text-decoration-none d-block my-3 text-dark">Создат базу знаний</a>
+                                <a href="#" class="text-decoration-none text-dark">Битрикс24.Маркет</a>
+                            </div>
+                        </div>
                     </div>
                     <button class="suggest__works font-opensans-semibold">Роботы</button>
                     <ul>
@@ -604,70 +652,6 @@
 
                     </form>
                 </div>
-
-                <div class="workarea__card">
-                    <div class="workarea__card__header">
-                        <span class="workarea__title">Название</span>
-                        <span class="title__count font-weight-normal">0</span>
-                        <i class="top__transparent darkpink"></i>
-                        <div class="plus_area font-weight-bold">+</div>
-                    </div>
-
-                    <p class='font-opensans-regular'><span>0</span> руб.</p>
-
-                    <button data-toggle="collapse" data-target="#demo__6"><i class="fas fa-plus"></i></button>
-                    <form method="GET" class="card__form collapse" id="demo__6">
-                        <span class="font-opensans-semibold">Клиент</span>
-                        <div class="card__form__body">
-
-                            <label for="contact" class="font-opensans-semibold">Контакт</label>
-
-                            <div class="contact__member">
-                                <span class="fas fa-user-circle text-secondary"></span>
-                                <i class="liner"></i>
-                                <input type="text" id="contact" placeholder="Имя контакта, телефон или e-mail">
-                                <span class="fas fa-search text-secondary"></span>
-                            </div>
-
-                            <p class="font-opensans-semibold"><i class="fas fa-plus"></i> Добавить участника</p>
-
-                            <label for="company" class="font-opensans-semibold">Компания</label>
-                            <div class="contact__member">
-                                <span class="fas fa-building text-secondary"></span>
-                                <i class="liner"></i>
-                                <input type="text" id="company" placeholder="Имя контакта, телефон или e-mail">
-                                <span class="fas fa-search text-secondary"></span>
-                            </div>
-                        </div>
-
-                        <div class="card__form__footer">
-                            <label for="name" class="font-opensans-semibold">Название</label>
-                            <input type="text" id="name" placeholder="Сделка #">
-
-                            <label for="timer" class="font-opensans-semibold">Сумма и валюта</label>
-                            <div class="d-flex time__bg">
-                                <input type="text" id="timer" value="0.00">
-                                <select>
-                                    <option value="1">Российский рубль</option>
-                                    <option value="2">Доллар США</option>
-                                    <option value="3">Евро</option>
-                                    <option value="4">Гривна</option>
-                                    <option value="5">Белорусский рубль</option>
-                                </select>
-
-
-                            </div>
-                            <span class="select__pole font-opensans-semibold">Выбрать поле</span>
-                        </div>
-
-                        <div class="submit__card d-flex">
-                            <button>Сохранить</button>
-                            <button>Отменить</button>
-                        </div>
-
-                    </form>
-                </div>
-
 
             </div>
         </main>

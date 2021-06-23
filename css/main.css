@@ -16,9 +16,31 @@
 
 /*================ SCROLL-BAR STYLES ============== */
 ::-webkit-scrollbar {
-    display: none; /* for test */
+    width: 6px;
 }
-    
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+.workarea__card{
+    position: relative;
+}
+.workarea__card::-webkit-scrollbar{
+    position: absolute;
+    top: 0;
+    right: -10px;
+}
+.
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 
 /*******************     FONTS STYLE    ************************/
 @font-face {
@@ -106,7 +128,24 @@ body nav{
     cursor: pointer;
 }
 
+.icon {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
 
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+
+
+}
+.icon.icon-structure{
+     mask-image: url("../assets/icons/business-and-trade.svg");
+     -webkit-mask-image: url("../assets/icons/business-and-trade.svg");
+     background-color: #14BFD5;
+ }
 
 /*========== NAVBAR - SEARCH ==========*/
 nav .search{
@@ -258,7 +297,7 @@ nav .user-account span:nth-child(1){
 .user-account .account__link{
     position: absolute;
     background-color: rgba(255,255,255);
-    top: 55px;
+    top: 45px;
     box-sizing: border-box;
     right: -19px;
     box-shadow: 0 0 10px rgb(43, 41, 41);
@@ -274,7 +313,13 @@ nav .user-account span:nth-child(1){
     position: absolute;
     top: -21px;
 }
-
+.user-account ul{
+    width: 225px;
+}
+.account__link li a{
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.64);
+}
 .account__link li, .downto__link li{
     padding: 0;
     margin: 0;
@@ -283,9 +328,9 @@ nav .user-account span:nth-child(1){
 
 .account__link li a, .downto__link li a{
     display: block;
-    font-size: 16px;
+    font-size: 12px;
     color: rgb(83, 82, 82);
-    padding: 3px 29px;
+    padding:    6px 10px;
     text-decoration: none;
 }
 
@@ -341,10 +386,19 @@ nav .clock:hover,
 
 
 }
-.buttons__type .dropdown .dropdown-menu{
+.buttons__type .dropdown .dropdownmenu{
     width: 300px!important;
     margin-right: 150px!important;
-    margin-top: 15px!important;
+    margin-top: 5px!important;
+    background-color: #E0EEEE;
+    border-radius: 20px;
+    padding: 15px;
+    transition: 0.5s all linear;
+}
+.buttons__type .dropdown .dropdown-menu{
+    width: 300px!important;
+    margin-right:100px!important;
+    margin-top: 5px!important;
     background-color: #E0EEEE;
     border-radius: 20px;
     padding: 15px;
@@ -491,6 +545,62 @@ nav .clock:hover,
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.struktura{
+    padding: 10px;
+    margin-top: 14px;
+    border-radius: 15px;
+    background-color: white;
+    transition: 0.3s all linear;
+}
+.struktura:hover{
+    transform: translateY(-10px);
+
+}
+.struktura h6{
+    font-size: 12px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+
+}
+.struktura p{
+    border: 0.5px solid #14BFD5;
+    border-radius: 6px;
+    font-size: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    box-shadow: 0 0 3px #14BFD5;
+}
+.sotrudnik{
+    padding: 10px;
+    margin-top: 14px;
+    margin-left: 12px;
+    border-radius: 15px;
+    background-color: white;
+    transition: 0.3s all linear;
+}
+.sotrudnik:hover{
+    transform: translateY(-10px);
+
+}
+.sotrudnik h6{
+    font-size: 14px;
+}
+.sotrudnik p{
+    font-size: 12px;
+    margin-bottom: 0!important;
+}
+.sotrudnik .text-center p{
+    font-size: 10px;
+}
+
+.sotrudnik img{
+    width: 30px;
+    height: 30px;
 }
 button.buy__paket, 
 button.invite{
@@ -729,6 +839,22 @@ color: var(--dark-blue-color)
 .button__group button:hover{
     background-color: rgba(255,255,255,0.25);
 }
+
+.button__group .card{
+    width: 150px;
+    display: none;
+    position: absolute;
+    z-index: 11;
+    bottom: -130px;
+    left: 116px;
+}
+.button__group .card a{
+    font-size: 11px;
+}
+.button__group:hover .card{
+    display: block;
+}
+
 .button__group button:nth-child(1){
     border-radius: 20px 0 0 20px;
     height:fit-content;
@@ -749,7 +875,49 @@ color: var(--dark-blue-color)
     width: 1px;
     left: -1px;
     background-color: rgba(255,255,255,0.65);
+}
 
+.obshee .card{
+    display: none;
+    width: 250px;
+    position: absolute;
+    bottom: -70px;
+    left: 0;
+    z-index: 11;
+}
+.obshee:hover .card{
+    display: block;
+}
+.obshee .card a{
+    font-size: 14px;
+}
+.nastroy .card{
+    display: none;
+    width: 250px;
+    position: absolute;
+    bottom: -182px;
+    left: 0;
+    z-index: 11;
+}
+.nastroy:hover .card{
+    display: block;
+}
+.nastroy .card a{
+    font-size: 14px;
+}
+.dobavit .card{
+    display: none;
+    width: 156px;
+    position: absolute;
+    bottom: -70px;
+    left: -153px;
+    z-index: 11;
+}
+.dobavit:hover .card{
+    display: block;
+}
+.dobavit .card a{
+    font-size: 14px;
 }
 .maintitle-sections .suggest__works{
   
@@ -793,8 +961,12 @@ color: var(--dark-blue-color)
    display: flex;
 
 }
+.workarea__card form{
+    height: 500px;
+    overflow-y: auto;
+}
 .main-workarea .workarea__card{
-    width: 220px;
+    width: 20%;
     height: 100vh;
     border-left: 1px dashed white;
 }
@@ -965,7 +1137,7 @@ color: var(--dark-blue-color)
 /*=========== WORKAREA CARD-FORM ============ */
 
 .card__form{
-   
+    width: 93%;
     background-color: white;
     padding: 13px;
     height: fit-content;

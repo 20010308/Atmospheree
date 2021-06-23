@@ -40,6 +40,7 @@ function deleteTask(index) {
 
 // События
 
+
 let byTimeToDo = [];
 
 function drawByTime(){
