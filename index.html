@@ -6,13 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="./assets/icons/24logo.ico">
+    <link rel="shortcut icon" href="./assets/icons/24-logo.ico">
 
     <link rel="stylesheet" href="./css/bootstrap.css">
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/animate.min.css">
-
     <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="./css/fontawesome.css">
     <link rel="stylesheet" href="./css/brands.css">
@@ -24,291 +20,523 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 
-
     <title>Atmosphere</title>
 </head>
-
 <body>
     <div class="main__page">
-        <div class="main__left__page">
-            <header>
-                <nav>
-                    <a href="#" class='navbar-brand'>
-                        <span>Битрикс</span>
-                        <span>24</span>
-                    </a>
+    <div class="main__left__page">
+        <header>
+            <nav>
+                <a href="#" class='navbar-brand'>
+                    <span>Битрикс</span>
+                    <span>24</span>
+                </a>
+                <div class="search">
+                    <form action="get">
+                        <input type="text" class="font-opensans-light"
+                               placeholder="искать сотрудника, документ, прочее...">
+                        <span class="fas fa-search font-opensans-light"></span>
+                    </form>
+                </div>
+                <div class="main__page">
+                    <div class="main__left__page">
+                        <header>
+                            <nav>
+                                <a href="#" class='navbar-brand'>
+                                    <span>Битрикс</span>
+                                    <span>24</span>
+                                </a>
 
 
-
-                    <div class="search">
-                        <form action="get">
-                            <input type="text" class="font-opensans-light"
-                                placeholder="искать сотрудника, документ, прочее...">
-                            <span class="fas fa-search font-opensans-light"></span>
-                        </form>
-                    </div>
-
-                    <div class="set_time">
-                        <div data-toggle="collapse" data-target="#demo_task" class="clock ">
-                            <span class='font-opensans-light' id='hour'></span>
-                            <span> : </span>
-                            <span class='font-opensans-light' id='minut'></span>
-                        </div>
-
-                        <div class="card collapse" id="demo_task">
-                            <div class="card-body">
-                                <h1>Задачи на день</h1>
-                                <div class="todolist w-100" id="todolist"></div>
-                                <div class="input__text d-flex justify-content-between">
-                                    <input type="text" id="todolist_input" class="form-control"
-                                        placeholder="vaifalarni kiriting">
-                                    <button onclick="AddTodo()" class="ml-3 btn bg-white border"> <span
-                                            class="fas fa-plus-circle"></span></button>
+                                <div class="search">
+                                    <form action="get">
+                                        <input type="text" class="font-opensans-light"
+                                               placeholder="искать сотрудника, документ, прочее...">
+                                        <span class="fas fa-search font-opensans-light"></span>
+                                    </form>
                                 </div>
 
-                                <h1 class="mt-5 h1__y">События</h1>
-                                <div class="todolist w-100" id="todolist-date"></div>
-                                <div class="input__text d-flex justify-content-between">
-                                    <input type="time" class="mx-2" id="start-time">
-                                    <input type="time" class="mx-2" id="end-time">
-                                    <input type="text" id="bytime" class="form-control"
-                                        placeholder="vaifalarni kiriting">
-                                    <button onclick="AddByTimeList()" class="ml-3 btn bg-white border"> <span
-                                            class="fas fa-plus-circle"></span></button>
+                                <div class="set_time">
+                                    <div data-toggle="collapse" data-target="#demo_task" class="clock ">
+                                        <span class='font-opensans-light' id='hour'></span>
+                                        <span> : </span>
+                                        <span class='font-opensans-light' id='minut'></span>
+                                    </div>
+
+                                    <div class="card collapse" id="demo_task">
+                                        <div class="card-body">
+                                            <h1>Задачи на день</h1>
+                                            <div class="todolist w-100" id="todolist"></div>
+                                            <div class="input__text d-flex justify-content-between">
+                                                <input type="text" id="todolist_input" class="form-control"
+                                                       placeholder="vaifalarni kiriting">
+                                                <button onclick="AddTodo()" class="ml-3 btn bg-white border"> <span
+                                                        class="fas fa-plus-circle"></span></button>
+                                            </div>
+
+                                            <h1 class="mt-5 h1__y">События</h1>
+                                            <div class="todolist w-100" id="todolist-date"></div>
+                                            <div class="input__text d-flex justify-content-between">
+                                                <input type="time" class="mx-2" id="start-time">
+                                                <input type="time" class="mx-2" id="end-time">
+                                                <input type="text" id="bytime" class="form-control"
+                                                       placeholder="vaifalarni kiriting">
+                                                <button onclick="AddByTimeList()"
+                                                        class="ml-3 btn bg-white border"> <span
+                                                        class="fas fa-plus-circle"></span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="user-account">
+                                        <span><i class="fas fa-user"></i></span>
+                                        <span>Account</span>
+                                        <span>&#9662;</span>
+                                        <ul class="account__link mt-2">
+                                            <li><a href="#">Моя странитца</a></li>
+                                            <li><a href="#">Темы оформления</a></li>
+                                            <li><a href="#">Моя страница Битрикс 24.Нетворк</a></li>
+                                            <li><a href="#">Настройка уведомлений</a></li>
+                                            <li><a href="#">Расширить тариф</a></li>
+                                            <li><a href="#">Расширения</a></li>
+                                            <li><a href="#">Выйти</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="user-account">
+                                        <span><i class="fas fa-user"></i></span>
+                                        <span>Account</span>
+                                        <span>&#9662;</span>
+                                        <ul data-aos="fade-up" class="account__link">
+                                            <li><a href="#">Моя страница</a></li>
+                                            <li><a href="#">Темы оформления</a></li>
+                                            <li><a href="#">Моя страница Битрикс24.Нетворк</a></li>
+                                            <li><a href="#">Настройка уведомлений</a></li>
+                                            <li><a href="#">Расширить тариф</a></li>
+                                            <li class="active__downto"><a href="#" id="down__to">Расширения <b>›</b></a>
+                                                <ul data-aos="fade-left" class="downto__link" id="down__to__link">
+                                                    <li><a href="#">Выбрать базу знаний</a></li>
+                                                    <li><a href="#">Создать базу знаний</a></li>
+                                                    <li><a href="#">Битрикс24.Маркет</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Выйти</a></li>
+                                        </ul>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="buttons__type">
+                                    <div class="dropdown">
+                                        <button
+                                                type="button"
+                                                class="btn btn-warning dropdown-toggle text-white buy__paket"
+                                                data-toggle="dropdown">
+                                            <!-- <div class="buttons__type">
+                                                <button class="buy__paket">
+                                                    <span class="rocket__wrapper"><i class="fas fa-rocket"></i></span>
+                                                    Купить тариф
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdownmenu w-100">
+                                                    <li><a href="#" class="text-decoration-none">
+
+                                                        <div class="d-flex bgwhite justify-content-between">
+                                                            <div class="rocket"><span class="fas fa-rocket"></span></div>
+                                                            <div class="pt-2">
+                                                                <h6 class="mb-0">Бесплатный</h6>
+                                                                <p class="mb-0">зачем расширять тариф</p>
+                                                            </div>
+                                                            <div class="button">
+                                                                <button type="button" class="btn btn-outline-success">Купит</button>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="d-flex">
+                                                            <div class="bggrey d-flex align-items-center">
+                                                                <div class="phone"><span class="fa fa-1x fa-phone"></span></div>
+                                                                <div class="p-2">
+                                                                    <p class="mb-0 text-dark">Телефония</p>
+                                                                    <div class="bg-white"><a href="#" class="text-dark text-decoration-none">Подключить</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="bggrey d-flex align-items-center">
+                                                                <div class="phone"><a href="#" class="fa fa-window-close-o"
+                                                                                      aria-hidden="true"></a></div>
+                                                                <div class="p-2">
+                                                                    <p class="mb-0 text-dark">Демо режим</p>
+                                                                    <div class="bg-white"><a href="#" class="text-dark text-decoration-none">Выключить</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="d-flex bggrey p-2 justify-content-between align-items-center">
+                                                            <div class="box"><span class="fas fa-1x fa-box"></span></div>
+                                                            <div class="pt-2 ml-2">
+                                                                <h6 class="mb-0">Подписка на Маркет</h6>
+                                                                <p class="mb-0">чем полезен Маркет</p>
+                                                            </div>
+                                                            <div class="bg-white ml-3"><a href="#" class="text-dark text-decoration-none">Подключит</a>
+                                                            </div>
+                                                        </div>
+                                                <button class="invite">
+                                                    <span class="font-opensans-semibold">Пригласить</span>
+                                                    <span>&#9662;</span>
+                                                </button>
+                                            </div> -->
+
+                                            <div class="buttons__type">
+                                                <div class="dropdown">
+                                                    <button type="button"
+                                                            class="btn btn-warning dropdown-toggle text-white buy__paket"
+                                                            data-toggle="dropdown">
+                                                        <span class="rocket__wrapper"><i
+                                                                class="fas fa-rocket"></i></span>
+                                                        Купить тариф
+                                                        <span class="caret"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdownmenu w-100">
+                                                        <li><a href="#" class="text-decoration-none">
+
+                                                            <div class="d-flex bgwhite justify-content-between">
+                                                                <div class="rocket"><span class="fas fa-rocket"></span>
+                                                                </div>
+                                                                <div class="pt-2">
+                                                                    <h6 class="mb-0">Бесплатный</h6>
+                                                                    <p class="mb-0">зачем расширять тариф</p>
+                                                                </div>
+                                                                <div class="button">
+                                                                    <button type="button"
+                                                                            class="btn btn-outline-success">Купит
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="d-flex">
+                                                                <div class="bggrey d-flex align-items-center">
+                                                                    <div class="phone"><span
+                                                                            class="fa fa-1x fa-phone"></span></div>
+                                                                    <div class="p-2">
+                                                                        <p class="mb-0 text-dark">Телефония</p>
+                                                                        <div class="bg-white"><a href="#"
+                                                                                                 class="text-dark text-decoration-none">Подключить</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="bggrey d-flex align-items-center">
+                                                                    <div class="phone"><a href="#"
+                                                                                          class="fa fa-window-close-o"
+                                                                                          aria-hidden="true"></a></div>
+                                                                    <div class="p-2">
+                                                                        <p class="mb-0 text-dark">Демо режим</p>
+                                                                        <div class="bg-white"><a href="#"
+                                                                                                 class="text-dark text-decoration-none">Выключить</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="d-flex bggrey p-2 justify-content-between align-items-center">
+                                                                <div class="box"><span class="fas fa-1x fa-box"></span>
+                                                                </div>
+                                                                <div class="pt-2 ml-2">
+                                                                    <h6 class="mb-0">Подписка на Маркет</h6>
+                                                                    <p class="mb-0">чем полезен Маркет</p>
+                                                                </div>
+                                                                <div class="bg-white ml-3"><a href="#"
+                                                                                              class="text-dark text-decoration-none">Подключит</a>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="d-flex">
+                                                                <div class="bggrey px-1 text-center">
+                                                                    <div class="phone d-block mx-auto"><span
+                                                                            class="fa fa-1x fa-phone"></span></div>
+                                                                    <div class="p-2">
+                                                                        <p class="mb-0 text-dark">Заказать внедрение</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="bggrey text-center">
+                                                                    <div class="phone d-block mx-auto">
+                                                                        <img src="assets/icons/email.jpg" height="15px"
+                                                                             width="15px"
+                                                                             alt="Error">
+                                                                    </div>
+                                                                    <div class="p-1">
+                                                                        <p class="mb-0 text-dark">Поддержка</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="bggrey text-center">
+                                                                    <div class="phone d-block mx-auto">
+                                                                        <img src="assets/icons/contract.jpg"
+                                                                             width="15px" height="15px"
+                                                                             alt="Error">
+                                                                    </div>
+                                                                    <div class="p-1">
+                                                                        <p class="mb-0 text-dark">Покупки и
+                                                                            документы</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </a></li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="dropdown">
+                                                    <button type="button" class="btn invite dropdown-toggle"
+                                                            data-toggle="dropdown">
+                                                        Пригласит
+                                                        <span class="caret"></span>
+                                                    </button>
+
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#" class="text-decoration-none">
+                                                            <div class="bgblue">
+                                                                <div class="users mb-3 mx-auto">
+                                                                    <i class="fa fa-users" aria-hidden="true"></i>
+                                                                </div>
+                                                                <div class="d-flex justify-content-between">
+                                                                    <div class="">
+                                                                        <h6 class="text-white mb-0">Бесплатный</h6>
+                                                                        <p class="mb-0 text-white">зачем расширять
+                                                                            тариф</p>
+                                                                    </div>
+                                                                    <div class="bg-white mt-2">
+                                                                        <a href="#"
+                                                                           class="text-dark text-decoration-none">+Подключит</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex justify-content-around align-items-center">
+                                                                <div class="struktura px-4">
+                                                                    <span class="icon icon-structure d-block mx-auto"></span>
+                                                                    <h6>Структура</h6>
+                                                                    <p class="">Настроить</p>
+                                                                </div>
+                                                                <div class="sotrudnik">
+                                                                    <div class="d-flex">
+                                                                        <img class="mr-2 mt-2"
+                                                                             src="assets/icons/user.jpg" alt="Error">
+                                                                        <div class="">
+                                                                            <h6>Сотрудники</h6>
+                                                                            <p class="text-black-50 mb-0">Сотрудников :
+                                                                                1</p>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="border mt-3"></div>
+                                                                    <div class="text-center">
+                                                                        <p class="text-black-50">Неограниченно
+                                                                            сотрудников</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+
+                            </nav>
+
+                            <div class="menu_nav_items">
+                                <ul>
+                                    <li>
+                                        <a class="font-opensans-semibold" href="index.html">Сделки</a>
+                                        <span class="fas fa-plus-circle"></span>
+                                    </li>
+                                    <li>
+                                        <a class="font-opensans-semibold" href="contacts.html">Контакты</a>
+                                        <span class="fas fa-plus-circle"></span>
+                                    </li>
+                                    <li>
+                                        <a class="font-opensans-semibold" href="companies.html">Компании</a>
+                                        <span class="fas fa-plus-circle"></span>
+                                    </li>
+                                    <li>
+                                        <a class="font-opensans-semibold" href="smart-pocesses.html">Смарт-процессы</a>
+                                        <span class="fas fa-plus-circle"></span>
+                                    </li>
+                                    <li>
+                                        <a class="font-opensans-semibold" href="settings.html">Настройки</a>
+                                        <span class="fas fa-plus-circle"></span>
+                                    </li>
+                                    <li>
+                                        <a class="font-opensans-semibold" href="products.html">Товары</a>
+                                        <span class="fas fa-plus-circle"></span>
+                                    </li>
+                                </ul>
+
+                                <div class="d-flex">
+                                    <div class="bggrey px-1 text-center">
+                                        <div class="phone d-block mx-auto"><span class="fa fa-1x fa-phone"></span></div>
+                                        <div class="p-2">
+                                            <p class="mb-0 text-dark">Заказать внедрение</p>
+                                        </div>
+                                    </div>
+                                    <div class="bggrey text-center">
+                                        <div class="phone d-block mx-auto">
+                                            <img src="assets/icons/email.png" height="15px" width="15px" alt="Error">
+                                        </div>
+                                        <div class="p-1">
+                                            <p class="mb-0 text-dark">Поддержка</p>
+                                        </div>
+                                    </div>
+                                    <div class="bggrey text-center">
+                                        <div class="phone d-block mx-auto">
+                                            <img src="assets/icons/contract.png" width="15px" height="15px" alt="Error">
+                                        </div>
+                                        <div class="p-1">
+                                            <p class="mb-0 text-dark">Покупки и документы</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                </a></li>
+                                </ul>
+                                <div class="filter__wrapper">
+                                    <div class="section__item font-opensans-light">
+                                        <h1 class="font-opensans-light">Сделки</h1>
+                                        <span class="far fa-star font-opensans-light"></span>
+                                    </div>
+
+                                    <div class="dropdown">
+                                        <button type="button" class="btn invite dropdown-toggle" data-toggle="dropdown">
+                                            Пригласит
+                                            <span class="caret"></span>
+                                        </button>
+
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#" class="text-decoration-none">
+                                                <div class="bgblue">
+                                                    <div class="users mb-3 mx-auto">
+                                                        <i class="fa fa-users" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="">
+                                                            <h6 class="text-white mb-0">Бесплатный</h6>
+                                                            <p class="mb-0 text-white">зачем расширять тариф</p>
+                                                        </div>
+                                                        <div class="bg-white mt-2">
+                                                            <a href="#" class="text-dark text-decoration-none">+Подключит</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-around align-items-center">
+                                                    <div class="struktura px-4">
+                                                        <span class="icon icon-structure d-block mx-auto"></span>
+                                                        <h6>Структура</h6>
+                                                        <p class="">Настроить</p>
+                                                    </div>
+                                                    <div class="sotrudnik">
+                                                        <div class="d-flex">
+                                                            <img class="mr-2 mt-2" src="assets/icons/user.png"
+                                                                 alt="Error">
+                                                            <div class="">
+                                                                <h6>Сотрудники</h6>
+                                                                <p class="text-black-50 mb-0">Сотрудников : 1</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="border mt-3"></div>
+                                                        <div class="text-center">
+                                                            <p class="text-black-50">Неограниченно сотрудников</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+            </nav>
 
+            <div class="menu_nav_items">
+                <ul>
+                    <li>
+                        <a class="font-opensans-semibold" href="#">Сделки</a>
+                        <span class="fas fa-plus-circle"></span>
+                    </li>
+                    <li>
+                        <a class="font-opensans-semibold" href="#">Контакты</a>
+                        <span class="fas fa-plus-circle"></span>
+                    </li>
+                    <li>
+                        <a class="font-opensans-semibold" href="#">Компании</a>
+                        <span class="fas fa-plus-circle"></span>
+                    </li>
+                    <li>
+                        <a class="font-opensans-semibold" href="#">Смарт-процессы</a>
+                        <span class="fas fa-plus-circle"></span>
+                    </li>
+                    <li>
+                        <a class="font-opensans-semibold" href="#">Настройки</a>
+                        <span class="fas fa-plus-circle"></span>
+                    </li>
+                    <li>
+                        <a class="font-opensans-semibold" href="#">Товары</a>
+                        <span class="fas fa-plus-circle"></span>
+                    </li>
+                    <li>
+                        <a class="font-opensans-semibold" href="#">Аналитика</a>
+                        <span class="fas fa-plus-circle"></span>
+                    </li>
+                </ul>
 
-                        <div class="user-account">
-                            <span><i class="fas fa-user"></i></span>
-                            <span>Account</span>
-                            <span>&#9662;</span>
-                            <ul data-aos="fade-up" class="account__link">
-                                <li><a href="#">Моя страница</a></li>
-                                <li><a href="#">Темы оформления</a></li>
-                                <li><a href="#">Моя страница Битрикс24.Нетворк</a></li>
-                                <li><a href="#">Настройка уведомлений</a></li>
-                                <li><a href="#">Расширить тариф</a></li>
-                                <li class="active__downto"><a href="#" id="down__to">Расширения <b>›</b></a>
-                                    <ul data-aos="fade-left" class="downto__link" id="down__to__link">
-                                        <li><a href="#">Выбрать базу знаний</a></li>
-                                        <li><a href="#">Создать базу знаний</a></li>
-                                        <li><a href="#">Битрикс24.Маркет</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Выйти</a></li>
-                            </ul>
-                        </div>
+                <a href="#" class="font-opensans-semibold">
+                    Еще <span>&#9662;</span>
+                </a>
+            </div>
 
-
-                    </div>
-
-                    <!-- <div class="buttons__type">
-                        <button class="buy__paket">
-                            <span class="rocket__wrapper"><i class="fas fa-rocket"></i></span>
-                            <span class="font-opensans-semibold">Купить тариф</span>
-                            <span>&#9662;</span>
-                        </button>
-
-                        <button class="invite">
-                            <span class="font-opensans-semibold">Пригласить</span>
-                            <span>&#9662;</span>
-                        </button>
-                    </div> -->
-
-                    <div class="buttons__type">
-                        <div class="dropdown">
-                            <button type="button" class="btn btn-warning dropdown-toggle text-white buy__paket"
-                                data-toggle="dropdown">
-                                <span class="rocket__wrapper"><i class="fas fa-rocket"></i></span>
-                                Купить тариф
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu dropdownmenu w-100">
-                                <li><a href="#" class="text-decoration-none">
-
-                                        <div class="d-flex bgwhite justify-content-between">
-                                            <div class="rocket"><span class="fas fa-rocket"></span></div>
-                                            <div class="pt-2">
-                                                <h6 class="mb-0">Бесплатный</h6>
-                                                <p class="mb-0">зачем расширять тариф</p>
-                                            </div>
-                                            <div class="button">
-                                                <button type="button" class="btn btn-outline-success">Купит</button>
-                                            </div>
-                                        </div>
-
-                                        <div class="d-flex">
-                                            <div class="bggrey d-flex align-items-center">
-                                                <div class="phone"><span class="fa fa-1x fa-phone"></span></div>
-                                                <div class="p-2">
-                                                    <p class="mb-0 text-dark">Телефония</p>
-                                                    <div class="bg-white"><a href="#"
-                                                            class="text-dark text-decoration-none">Подключить</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="bggrey d-flex align-items-center">
-                                                <div class="phone"><a href="#" class="fa fa-window-close-o"
-                                                        aria-hidden="true"></a></div>
-                                                <div class="p-2">
-                                                    <p class="mb-0 text-dark">Демо режим</p>
-                                                    <div class="bg-white"><a href="#"
-                                                            class="text-dark text-decoration-none">Выключить</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="d-flex bggrey p-2 justify-content-between align-items-center">
-                                            <div class="box"><span class="fas fa-1x fa-box"></span></div>
-                                            <div class="pt-2 ml-2">
-                                                <h6 class="mb-0">Подписка на Маркет</h6>
-                                                <p class="mb-0">чем полезен Маркет</p>
-                                            </div>
-                                            <div class="bg-white ml-3"><a href="#"
-                                                    class="text-dark text-decoration-none">Подключит</a>
-                                            </div>
-                                        </div>
-
-                                        <div class="d-flex">
-                                            <div class="bggrey px-1 text-center">
-                                                <div class="phone d-block mx-auto"><span
-                                                        class="fa fa-1x fa-phone"></span></div>
-                                                <div class="p-2">
-                                                    <p class="mb-0 text-dark">Заказать внедрение</p>
-                                                </div>
-                                            </div>
-                                            <div class="bggrey text-center">
-                                                <div class="phone d-block mx-auto">
-                                                    <img src="assets/icons/email.jpg" height="15px" width="15px"
-                                                        alt="Error">
-                                                </div>
-                                                <div class="p-1">
-                                                    <p class="mb-0 text-dark">Поддержка</p>
-                                                </div>
-                                            </div>
-                                            <div class="bggrey text-center">
-                                                <div class="phone d-block mx-auto">
-                                                    <img src="assets/icons/contract.jpg" width="15px" height="15px"
-                                                        alt="Error">
-                                                </div>
-                                                <div class="p-1">
-                                                    <p class="mb-0 text-dark">Покупки и документы</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </a></li>
-                            </ul>
-                        </div>
-
-                        <div class="dropdown">
-                            <button type="button" class="btn invite dropdown-toggle" data-toggle="dropdown">
-                                Пригласит
-                                <span class="caret"></span>
-                            </button>
-
-                            <ul class="dropdown-menu">
-                                <li><a href="#" class="text-decoration-none">
-                                        <div class="bgblue">
-                                            <div class="users mb-3 mx-auto">
-                                                <i class="fa fa-users" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="d-flex justify-content-between">
-                                                <div class="">
-                                                    <h6 class="text-white mb-0">Бесплатный</h6>
-                                                    <p class="mb-0 text-white">зачем расширять тариф</p>
-                                                </div>
-                                                <div class="bg-white mt-2">
-                                                    <a href="#" class="text-dark text-decoration-none">+Подключит</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex justify-content-around align-items-center">
-                                            <div class="struktura px-4">
-                                                <span class="icon icon-structure d-block mx-auto"></span>
-                                                <h6>Структура</h6>
-                                                <p class="">Настроить</p>
-                                            </div>
-                                            <div class="sotrudnik">
-                                                <div class="d-flex">
-                                                    <img class="mr-2 mt-2" src="assets/icons/user.jpg" alt="Error">
-                                                    <div class="">
-                                                        <h6>Сотрудники</h6>
-                                                        <p class="text-black-50 mb-0">Сотрудников : 1</p>
-                                                    </div>
-                                                </div>
-
-                                                <div class="border mt-3"></div>
-                                                <div class="text-center">
-                                                    <p class="text-black-50">Неограниченно сотрудников</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-                </nav>
-
-                <div class="menu_nav_items">
-                    <ul>
-                        <li>
-                            <a class="font-opensans-semibold" href="index.html">Сделки</a>
-                            <span class="fas fa-plus-circle"></span>
-                        </li>
-                        <li>
-                            <a class="font-opensans-semibold" href="contacts.html">Контакты</a>
-                            <span class="fas fa-plus-circle"></span>
-                        </li>
-                        <li>
-                            <a class="font-opensans-semibold" href="companies.html">Компании</a>
-                            <span class="fas fa-plus-circle"></span>
-                        </li>
-                        <li>
-                            <a class="font-opensans-semibold" href="smart-pocesses.html">Смарт-процессы</a>
-                            <span class="fas fa-plus-circle"></span>
-                        </li>
-                        <li>
-                            <a class="font-opensans-semibold" href="settings.html">Настройки</a>
-                            <span class="fas fa-plus-circle"></span>
-                        </li>
-                        <li>
-                            <a class="font-opensans-semibold" href="products.html">Товары</a>
-                            <span class="fas fa-plus-circle"></span>
-                        </li>
-                    </ul>
-
-                    <a href="#" class="font-opensans-semibold">
-                        Еще <span>&#9662;</span>
-                    </a>
+            <div class="filter__wrapper">
+                <div class="section__item font-opensans-light">
+                    <h1 class="font-opensans-light">Сделки</h1> <span
+                        class="far fa-star font-opensans-light"></span>
                 </div>
 
-                <div class="filter__wrapper">
-                    <div class="section__item font-opensans-light">
-                        <h1 class="font-opensans-light">Сделки</h1>
-                        <span class="far fa-star font-opensans-light"></span>
-                    </div>
+                <div class="search__filter">
+                    <input type="text" placeholder="Фильтр + поиск">
+                    <span class="fas fa-search font-weight-light"></span>
+                </div>
 
-                    <div class="search__filter">
-                        <input type="text" placeholder="Фильтр + поиск">
-                        <span class="fas fa-search font-weight-light"></span>
+                <div class="obshee position-relative">
+                    <button class="font-opensans-semibold">Общее <span>&#9662;</span></button>
+                    <div class="card">
+                        <div class="card-body p-2">
+                            <a href="#" class="text-dark d-block mb-2 text-decoration-none">Общее</a>
+                            <a href="#" class="text-dark text-decoration-none">Воронки и тунели продаж</a>
+                        </div>
                     </div>
-
+                </div>
+                <div class="nastroy position-relative">
                     <!-- <button class="font-opensans-semibold">Общее <span>&#9662;</span></button>
                     <button><i class="fas fa-cog"></i></button>
-                    <div class="addition_contract">
-                        <button class="font-opensans-semibold">Добавить сделку </button>
-                        <div class="ver__line"></div>
+                    <div class="card">
+                        <div class="card-body p-2">
+                            <a href="#" class="d-block mb-2 text-decoration-none text-black-50">Настройка канбана</a>
+                            <a href="#" class="d-block mb-2 text-decoration-none text-black-50">Миграция из других CRM</a>
+                            <a href="#" class="d-block mb-2 text-decoration-none text-black-50">Отраслевые сценарии</a>
+                            <a href="#" class="d-block mb-2 text-decoration-none text-black-50">Режим работы СRM</a>
+                            <a href="#" class="d-block mb-2 text-decoration-none text-black-50">Режим работы с заказами</a>
+                            <a href="#" class="d-block text-decoration-none text-black-50">Показать блок Контакт центра</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="addition_contract">
+                    <button class="font-opensans-semibold">Добавить сделку</button>
+                    <div class="ver__line"></div>
+                    <div class="dobavit position-relative">
                         <button>&#9662;</button>
+                        <div class="card">
+                            <div class="card-body p-2">
+                                <a class="text-black-50 text-decoration-none mb-2 d-block" href="#">Добавит сделку</a>
+                                <a class="text-black-50 text-decoration-none" href="#">Генератор продаж</a>
                     </div> -->
 
 
-                    <!-- ============================= -->
                     <div class="obshee position-relative">
                         <button class="font-opensans-semibold">Общее <span>&#9662;</span></button>
                         <div class="card">
@@ -345,742 +573,813 @@
                                     <a class="text-black-50 text-decoration-none  d-block" href="#">Добавит сделку</a>
                                     <a class="text-black-50 text-decoration-none" href="#">Генератор продаж</a>
                                 </div>
+                                >>>>>>> a7889af817e4a2b6facbba10bacffd43cbbcfd95
                             </div>
                         </div>
                     </div>
-                    <!-- ============================= -->
-
-
 
 
                 </div>
-            </header>
+            </div>
+        </header>
 
 
-            <main>
-                <div class="maintitle-page" id="contents">
-                    <p class="font-opesans-regular">Нет сделок, требующих оперативной реакции</p>
+        <main>
+            <div class="maintitle-page">
+                <p class="font-opesans-regular">Нет сделок, требующих оперативной реакции</p>
+                <main>
+                    <div class="maintitle-page" id="contents">
+                        <p class="font-opesans-regular">Нет сделок, требующих оперативной реакции</p>
+                        >>>>>>> a7889af817e4a2b6facbba10bacffd43cbbcfd95
 
-                    <div class="maintitle-sections">
-                        <div class="button__group btn-group">
-                            <button class="font-opensans-semibold h-auto">Расширения</button><button
-                                class="font-opensans-semibold"><span>&#9662;</span></button>
+                        <div class="maintitle-sections">
+                            <div class="button__group position-relative btn-group">
+                                <button class="font-opensans-semibold h-auto">Расширения</button>
+                                <button
+                                        class="font-opensans-semibold"><span>&#9662;</span>
+                                </button>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <a href="#" class="text-decoration-none d-block text-dark">Выбрат базу
+                                            знаний</a>
+                                        <a href="#" class="text-decoration-none d-block my-3 text-dark">Создат базу
+                                            знаний</a>
+                                        <a href="#" class="text-decoration-none text-dark">Битрикс24.Маркет</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="suggest__works font-opensans-semibold">Роботы</button>
+                            <ul>
+                                <li><a href="#" class="font-opensans-semibold">Канбан</a></li>
+                                <li><a href="#" class="font-opensans-semibold">Список</a></li>
+                                <li><a href="#" class="font-opensans-semibold">Календарь</a></li>
+                            </ul>
                         </div>
-                        <button class="suggest__works font-opensans-semibold">Роботы</button>
-                        <ul>
-                            <li><a href="#" class="font-opensans-semibold">Канбан</a></li>
-                            <li><a href="#" class="font-opensans-semibold">Список</a></li>
-                            <li><a href="#" class="font-opensans-semibold">Календарь</a></li>
-                        </ul>
                     </div>
-                </div>
 
-
-
-                <div class="main__test">
-                   </div>
-
-                
-
-                <div class="main-workarea" data-aos="fade-up" data-aos-duration="1000">
-
-                     <div class="workarea__card" > 
-                        <div class="workarea__card__header">
-                            <span class="workarea__title">Название</span>
-                            <span class="title__count font-weight-normal">0</span>
-                            <i class="top__transparent blue"></i>
-                            <div class="plus_area font-weight-bold" onclick="workListFunction()">+</div>
-                        </div>
-
-                        <p class='font-opensans-regular'><span>0</span> руб.</p>
-
-                        <button class="main accordion"><i class="fas fa-plus"></i>
-                            Быстрая сделка</button>
-
-                        <form action="#" method="get" class="card__form panel">
-
-                            <label for="name" class="font-opensans-semibold">Название</label>
-                            <input type="text" id="name" placeholder="Сделка #" name="agreement">
-
-                            <span class="font-opensans-semibold">Клиент</span>
-                         
-                             <div class="card__form__body"> 
-
-                                <label for="contact" class="font-opensans-semibold">Контакт</label>
-
-                                <div class="contact__member">
-                                    <span class="fas fa-user-circle text-secondary"></span>
-                                    <i class="liner"></i>
-                                    <input type="text" id="contact" name="tel"  placeholder="Имя контакта, телефон или e-mail">
-                                    <span class="fas fa-search text-secondary"></span>
-                                </div> 
-
-                              <p class="font-opensans-semibold"><i class="fas fa-plus"></i> Добавить участника</p>
-
-                                <label for="company" class="font-opensans-semibold">Компания</label>
-                                <div class="contact__member">
-                                    <span class="fas fa-building text-secondary"></span>
-                                    <i class="liner"></i>
-                                    <input type="text" id="company" name="company_tel" placeholder="Название компании, телефон или e-mail">
-                                    <span class="fas fa-search text-secondary"></span>
-                                </div> 
-                             </div> 
-                             <div class="card__form__footer"> 
-                            
-
-                                <label for="timer" class="font-opensans-semibold">Сумма и валюта</label>
-                                <div class="d-flex time__bg">
-                                    <input type="number" id="timer" value="0.00" name="currency">
-                                    <select>
-                                        <option value="1">Российский рубль</option>
-                                        <option value="2">Доллар США</option>
-                                        <option value="3">Евро</option>
-                                        <option value="4">Гривна</option>
-                                        <option value="5">Белорусский рубль</option>
-                                    </select>                        </div>
-                                <span class="select__pole font-opensans-semibold">Выбрать поле</span> 
-                           </div> 
-
-                            <div class="submit__card d-flex">
-                                <button type="submit">Сохранить</button>
-                                <button type="reset">Отменить</button>
+                    <div class="main-workarea">
+                        <div class="workarea__card">
+                            <div class="workarea__card__header">
+                                <span class="workarea__title">Название</span>
+                                <span class="title__count font-weight-normal">0</span>
+                                <i class="top__transparent blue"></i>
+                                <div class="plus_area font-weight-bold">+</div>
                             </div>
 
-                        </form>
+                            <p class='font-opensans-regular'><span>0</span> руб.</p>
 
-
-                    </div>
-
-                   <div class="workarea__card"> 
-                        <div class="workarea__card__header">
-                            <span class="workarea__title">Название</span>
-                            <span class="title__count font-weight-normal">0</span>
-                            <i class="top__transparent blue"></i>
-                            <div class="plus_area font-weight-bold" onclick="workListFunction()">+</div>
-                        </div>
-
-                        <p class='font-opensans-regular'><span>0</span> руб.</p>
-
-                        <button class="main accordion"><i class="fas fa-plus"></i>
+                            <button class="main" data-toggle="collapse" data-target="#demo"><i class="fas fa-plus"></i>
+                                Быстрая сделка
                             </button>
 
-                        <form action="#" method="get" class="card__form panel">
 
-                            <label for="name" class="font-opensans-semibold">Название</label>
-                            <input type="text" id="name" placeholder="Сделка #" name="agreement">
-
-                            <span class="font-opensans-semibold">Клиент</span>
-                         
-                             <div class="card__form__body"> 
-
-                                <label for="contact" class="font-opensans-semibold">Контакт</label>
-
-                                <div class="contact__member">
-                                    <span class="fas fa-user-circle text-secondary"></span>
-                                    <i class="liner"></i>
-                                    <input type="text" id="contact" name="tel"  placeholder="Имя контакта, телефон или e-mail">
-                                    <span class="fas fa-search text-secondary"></span>
-                                </div> 
-
-                              <p class="font-opensans-semibold"><i class="fas fa-plus"></i> Добавить участника</p>
-
-                                <label for="company" class="font-opensans-semibold">Компания</label>
-                                <div class="contact__member">
-                                    <span class="fas fa-building text-secondary"></span>
-                                    <i class="liner"></i>
-                                    <input type="text" id="company" name="company_tel" placeholder="Название компании, телефон или e-mail">
-                                    <span class="fas fa-search text-secondary"></span>
-                                </div> 
-                             </div> 
-                             <div class="card__form__footer"> 
-                  
-
-                                <label for="timer" class="font-opensans-semibold">Сумма и валюта</label>
-                                <div class="d-flex time__bg">
-                                    <input type="number" id="timer" value="0.00" name="currency">
-                                    <select>
-                                        <option value="1">Российский рубль</option>
-                                        <option value="2">Доллар США</option>
-                                        <option value="3">Евро</option>
-                                        <option value="4">Гривна</option>
-                                        <option value="5">Белорусский рубль</option>
-                                    </select>                        </div>
-                                <span class="select__pole font-opensans-semibold">Выбрать поле</span> 
-                           </div> 
-
-                            <div class="submit__card d-flex">
-                                <button type="submit">Сохранить</button>
-                                <button type="reset">Отменить</button>
+                            <div class="main__test">
                             </div>
 
-                        </form>
 
+                            <div class="main-workarea" data-aos="fade-up" data-aos-duration="1000">
+
+                                <div class="workarea__card">
+                                    <div class="workarea__card__header">
+                                        <span class="workarea__title">Название</span>
+                                        <span class="title__count font-weight-normal">0</span>
+                                        <i class="top__transparent blue"></i>
+                                        <div class="plus_area font-weight-bold" onclick="workListFunction()">+</div>
+                                    </div>
+
+                                    <p class='font-opensans-regular'><span>0</span> руб.</p>
+
+                                    <button class="main accordion"><i class="fas fa-plus"></i>
+                                        Быстрая сделка
+                                    </button>
+
+                                    <form action="#" method="get" class="card__form panel">
+
+                                        <label for="name" class="font-opensans-semibold">Название</label>
+                                        <input type="text" id="name" placeholder="Сделка #" name="agreement">
+
+                                        <span class="font-opensans-semibold">Клиент</span>
+
+                                        <div class="card__form__body">
+                                            <form method="GET" class="card__form collapse" id="demo">
+                                                <span class="font-opensans-semibold">Клиент</span>
+                                                <div class="card__form__body">
+
+                                                    <label for="contact3" class="font-opensans-semibold">Контакт</label>
+
+                                                    <div class="contact__member">
+                                                        <span class="fas fa-user-circle text-secondary"></span>
+                                                        <i class="liner"></i>
+                                                        <input type="text" id="contact3"
+                                                               placeholder="Имя контакта, телефон или e-mail">
+                                                        <span class="fas fa-search text-secondary"></span>
+                                                    </div>
+
+                                                    <p class="font-opensans-semibold"><i class="fas fa-plus"></i>
+                                                        Добавить участника</p>
+
+                                                    <label for="company4"
+                                                           class="font-opensans-semibold">Компания</label>
+                                                    <div class="contact__member">
+                                                        <span class="fas fa-building text-secondary"></span>
+                                                        <i class="liner"></i>
+                                                        <input type="text" id="company4"
+                                                               placeholder="Имя контакта, телефон или e-mail">
+                                                        <span class="fas fa-search text-secondary"></span>
+                                                    </div>
+                                                    <div class="contact__member">
+                                                        <span class="fas fa-user-circle text-secondary"></span>
+                                                        <i class="liner"></i>
+                                                        <input type="text" id="contact" name="tel"
+                                                               placeholder="Имя контакта, телефон или e-mail">
+                                                        <span class="fas fa-search text-secondary"></span>
+                                                    </div>
+
+                                                    <p class="font-opensans-semibold"><i class="fas fa-plus"></i>
+                                                        Добавить участника</p>
+
+                                                    <label for="company5" class="font-opensans-semibold">Компания</label>
+                                                    <div class="contact__member">
+                                                        <span class="fas fa-building text-secondary"></span>
+                                                        <i class="liner"></i>
+                                                        <input type="text" id="company5" name="company_tel"
+                                                               placeholder="Название компании, телефон или e-mail">
+                                                        <span class="fas fa-search text-secondary"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="card__form__footer">
+
+
+                                                    <label for="timer4" class="font-opensans-semibold">Сумма и
+                                                        валюта</label>
+                                                    <div class="d-flex time__bg">
+                                                        <input type="number" id="timer4" value="0.00" name="currency">
+                                                        <select>
+                                                            <option value="1">Российский рубль</option>
+                                                            <option value="2">Доллар США</option>
+                                                            <option value="3">Евро</option>
+                                                            <option value="4">Гривна</option>
+                                                            <option value="5">Белорусский рубль</option>
+                                                        </select></div>
+                                                    <span class="select__pole font-opensans-semibold">Выбрать поле</span>
+                                                </div>
+
+                                                <div class="submit__card d-flex">
+                                                    <button type="submit">Сохранить</button>
+                                                    <button type="reset">Отменить</button>
+                                                </div>
+
+                                            </form>
+
+
+                                        </div>
+
+                                        <div class="workarea__card">
+                                            <div class="workarea__card__header">
+                                                <span class="workarea__title">Название</span>
+                                                <span class="title__count font-weight-normal">0</span>
+                                                <i class="top__transparent blue"></i>
+                                                <div class="plus_area font-weight-bold" onclick="workListFunction()">+
+                                                </div>
+                                            </div>
+
+                                            <p class='font-opensans-regular'><span>0</span> руб.</p>
+
+                                            <button class="main accordion"><i class="fas fa-plus"></i>
+                                            </button>
+
+                                            <form action="#" method="get" class="card__form panel">
+
+                                                <label for="name5" class="font-opensans-semibold">Название</label>
+                                                <input type="text" id="name5" placeholder="Сделка #" name="agreement">
+
+                                                <span class="font-opensans-semibold">Клиент</span>
+
+                                                <div class="card__form__body">
+
+                                                    <label for="contact" class="font-opensans-semibold">Контакт</label>
+
+                                                    <div class="contact__member">
+                                                        <span class="fas fa-user-circle text-secondary"></span>
+                                                        <i class="liner"></i>
+                                                        <input type="text" id="contact" name="tel"
+                                                               placeholder="Имя контакта, телефон или e-mail">
+                                                        <span class="fas fa-search text-secondary"></span>
+                                                    </div>
+
+                                                    <p class="font-opensans-semibold"><i class="fas fa-plus"></i>
+                                                        Добавить участника</p>
+
+                                                    <label for="company6" class="font-opensans-semibold">Компания</label>
+                                                    <div class="contact__member">
+                                                        <span class="fas fa-building text-secondary"></span>
+                                                        <i class="liner"></i>
+                                                        <input type="text" id="company6" name="company_tel"
+                                                               placeholder="Название компании, телефон или e-mail">
+                                                        <span class="fas fa-search text-secondary"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="card__form__footer">
+
+
+                                                    <label for="timer5" class="font-opensans-semibold">Сумма и
+                                                        валюта</label>
+                                                    <div class="d-flex time__bg">
+                                                        <input type="number" id="timer5" value="0.00" name="currency">
+                                                        <select>
+                                                            <option value="1">Российский рубль</option>
+                                                            <option value="2">Доллар США</option>
+                                                            <option value="3">Евро</option>
+                                                            <option value="4">Гривна</option>
+                                                            <option value="5">Белорусский рубль</option>
+                                                        </select></div>
+                                                    <span class="select__pole font-opensans-semibold">Выбрать поле</span>
+                                                </div>
+
+                                                <div class="submit__card d-flex">
+                                                    <button type="submit">Сохранить</button>
+                                                    <button type="reset">Отменить</button>
+                                                </div>
+
+                                            </form>
+
+
+                                        </div>
+
+                                        <div class="workarea__card">
+                                            <div class="workarea__card__header">
+                                                <span class="workarea__title">Название</span>
+                                                <span class="title__count font-weight-normal">0</span>
+                                                <i class="top__transparent blue"></i>
+                                                <div class="plus_area font-weight-bold" onclick="">+</div>
+                                            </div>
+
+                                            <p class='font-opensans-regular'><span>0</span> руб.</p>
+
+                                            <button class="main accordion"><i class="fas fa-plus"></i>
+                                            </button>
+
+                                            <form action="#" method="get" class="card__form panel">
+
+                                                <label for="name6" class="font-opensans-semibold">Название</label>
+                                                <input type="text" id="name6" placeholder="Сделка #" name="agreement">
+
+
+                                                <span class="font-opensans-semibold">Клиент</span>
+
+                                                <div class="card__form__body">
+
+                                                    <label for="contact" class="font-opensans-semibold">Контакт</label>
+
+                                                    <div class="contact__member">
+                                                        <span class="fas fa-user-circle text-secondary"></span>
+                                                        <i class="liner"></i>
+                                                        <input type="text6" id="contact6" name="tel"
+                                                               placeholder="Имя контакта, телефон или e-mail">
+                                                        <span class="fas fa-search text-secondary"></span>
+                                                    </div>
+
+                                                    <p class="font-opensans-semibold"><i class="fas fa-plus"></i>
+                                                        Добавить участника</p>
+
+                                                    <label for="company7" class="font-opensans-semibold">Компания</label>
+                                                    <div class="contact__member">
+                                                        <span class="fas fa-building text-secondary"></span>
+                                                        <i class="liner"></i>
+                                                        <input type="text" id="company7" name="company_tel"
+                                                               placeholder="Название компании, телефон или e-mail">
+                                                        <span class="fas fa-search text-secondary"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="card__form__footer">
+
+
+                                                    <label for="timer7" class="font-opensans-semibold">Сумма и
+                                                        валюта</label>
+                                                    <div class="d-flex time__bg">
+                                                        <input type="number" id="timer7" value="0.00" name="currency">
+                                                        <select>
+                                                            <option value="1">Российский рубль</option>
+                                                            <option value="2">Доллар США</option>
+                                                            <option value="3">Евро</option>
+                                                            <option value="4">Гривна</option>
+                                                            <option value="5">Белорусский рубль</option>
+                                                        </select></div>
+                                                    <span class="select__pole font-opensans-semibold">Выбрать поле</span>
+                                                </div>
+
+                                                <div class="submit__card d-flex">
+                                                    <button type="submit">Сохранить</button>
+                                                    <button type="reset">Отменить</button>
+                                                </div>
+
+                                            </form>
+
+
+                                        </div>
+
+                                        <div class="workarea__card">
+                                            <div class="workarea__card__header">
+                                                <span class="workarea__title">Название</span>
+                                                <span class="title__count font-weight-normal">0</span>
+                                                <i class="top__transparent blue"></i>
+                                                <div class="plus_area font-weight-bold" onclick="workListFunction()">+
+                                                </div>
+                                            </div>
+
+                                            <p class='font-opensans-regular'><span>0</span> руб.</p>
+
+                                            <button class="main accordion"><i class="fas fa-plus"></i>
+                                            </button>
+
+                                            <form action="#" method="get" class="card__form panel">
+
+                                                <label for="name7" class="font-opensans-semibold">Название</label>
+                                                <input type="text" id="name7" placeholder="Сделка #" name="agreement">
+
+
+                                                <span class="font-opensans-semibold">Клиент</span>
+
+                                                <div class="card__form__body">
+
+                                                    <label for="contact7" class="font-opensans-semibold">Контакт</label>
+
+                                                    <div class="contact__member">
+                                                        <span class="fas fa-user-circle text-secondary"></span>
+                                                        <i class="liner"></i>
+                                                        <input type="text" id="contact7" name="tel"
+                                                               placeholder="Имя контакта, телефон или e-mail">
+                                                        <span class="fas fa-search text-secondary"></span>
+                                                    </div>
+
+                                                    <p class="font-opensans-semibold"><i class="fas fa-plus"></i>
+                                                        Добавить участника</p>
+
+                                                    <label for="company8" class="font-opensans-semibold">Компания</label>
+                                                    <div class="contact__member">
+                                                        <span class="fas fa-building text-secondary"></span>
+                                                        <i class="liner"></i>
+                                                        <input type="text" id="company8" name="company_tel"
+                                                               placeholder="Название компании, телефон или e-mail">
+                                                        <span class="fas fa-search text-secondary"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="card__form__footer">
+
+                                                    <label for="timer8" class="font-opensans-semibold">Сумма и
+                                                        валюта</label>
+                                                    <div class="d-flex time__bg">
+                                                        <input type="number" id="timer8" value="0.00" name="currency">
+                                                        <select>
+                                                            <option value="1">Российский рубль</option>
+                                                            <option value="2">Доллар США</option>
+                                                            <option value="3">Евро</option>
+                                                            <option value="4">Гривна</option>
+                                                            <option value="5">Белорусский рубль</option>
+                                                        </select></div>
+                                                    <span class="select__pole font-opensans-semibold">Выбрать поле</span>
+                                                </div>
+
+                                                <div class="submit__card d-flex">
+                                                    <button type="submit">Сохранить</button>
+                                                    <button type="reset">Отменить</button>
+                                                </div>
+
+                                            </form>
+
+
+                                        </div>
+
+                                        <div class="workarea__card">
+                                            <div class="workarea__card__header">
+                                                <span class="workarea__title">Название</span>
+                                                <span class="title__count font-weight-normal">0</span>
+                                                <i class="top__transparent blue"></i>
+                                                <div class="plus_area font-weight-bold" onclick="workListFunction()">+
+                                                </div>
+                                            </div>
+
+                                            <p class='font-opensans-regular'><span>0</span> руб.</p>
+
+                                            <button class="main accordion"><i class="fas fa-plus"></i>
+                                            </button>
+
+                                            <form action="#" method="get" class="card__form panel">
+
+                                                <label for="name8" class="font-opensans-semibold">Название</label>
+                                                <input type="text" id="name8" placeholder="Сделка #" name="agreement">
+
+                                                <span class="font-opensans-semibold">Клиент</span>
+
+                                                <div class="card__form__body">
+
+                                                    <label for="contact8" class="font-opensans-semibold">Контакт</label>
+
+                                                    <div class="contact__member">
+                                                        <span class="fas fa-user-circle text-secondary"></span>
+                                                        <i class="liner"></i>
+                                                        <input type="text" id="contact8" name="tel"
+                                                               placeholder="Имя контакта, телефон или e-mail">
+                                                        <span class="fas fa-search text-secondary"></span>
+                                                    </div>
+
+                                                    <p class="font-opensans-semibold"><i class="fas fa-plus"></i>
+                                                        Добавить участника</p>
+
+                                                    <label for="company" class="font-opensans-semibold">Компания</label>
+                                                    <div class="contact__member">
+                                                        <span class="fas fa-building text-secondary"></span>
+                                                        <i class="liner"></i>
+                                                        <input type="text" id="company" name="company_tel"
+                                                               placeholder="Название компании, телефон или e-mail">
+                                                        <span class="fas fa-search text-secondary"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="card__form__footer">
+
+
+                                                    <label for="timer" class="font-opensans-semibold">Сумма и
+                                                        валюта</label>
+                                                    <div class="d-flex time__bg">
+                                                        <input type="number" id="timer" value="0.00" name="currency">
+                                                        <select>
+                                                            <option value="1">Российский рубль</option>
+                                                            <option value="2">Доллар США</option>
+                                                            <option value="3">Евро</option>
+                                                            <option value="4">Гривна</option>
+                                                            <option value="5">Белорусский рубль</option>
+                                                        </select></div>
+                                                    <span class="select__pole font-opensans-semibold">Выбрать поле</span>
+                                                </div>
+
+                                                <div class="submit__card d-flex">
+                                                    <button type="submit">Сохранить</button>
+                                                    <button type="reset">Отменить</button>
+                                                </div>
+
+                                            </form>
+
+
+                                        </div>
+
+
+                                        <!-- <div id="main-workarea" class="main-work-cards"></div> -->
+                                        <!-- <div class="workarea__card">
+                                            <div class="workarea__card__header">
+                                                <span class="workarea__title">Название</span>
+                                                <span class="title__count font-weight-normal">0</span>
+                                                <i class="top__transparent green"></i>
+                                                <div class="plus_area font-weight-bold">+</div>
+                                            </div>
+
+                                            <div class="card__form__footer">
+                                                <label for="name3" class="font-opensans-semibold">Название</label>
+                                                <input type="text" id="name3" placeholder="Сделка #">
+
+                                                <label for="timer3" class="font-opensans-semibold">Сумма и валюта</label>
+                                                <div class="d-flex time__bg">
+                                                    <input type="text" id="timer3" value="0.00">
+                                                    <select>
+                                                        <option value="1">Российский рубль</option>
+                                                        <option value="2">Доллар США</option>
+                                                        <option value="3">Евро</option>
+                                                        <option value="4">Гривна</option>
+                                                        <option value="5">Белорусский рубль</option>
+                                                    </select>
+
+
+                                                </div>
+                                                <span class="select__pole font-opensans-semibold">Выбрать поле</span>
+                                            </div>
+
+                                            <div class="submit__card d-flex">
+                                                <button>Сохранить</button>
+                                                <button>Отменить</button>
+                                            </div>
+
+                                        </form>
+
+
+                                    </div>
+
+                                    <div class="workarea__card">
+                                        <div class="workarea__card__header">
+                                            <span class="workarea__title">Название</span>
+                                            <span class="title__count font-weight-normal">0</span>
+                                            <i class="top__transparent green"></i>
+                                            <div class="plus_area font-weight-bold">+</div>
+                                        </div>
+
+                                        <p class='font-opensans-regular'><span>0</span> руб.</p>
+
+                                        <button data-toggle="collapse" data-target="#demo__2"><i class="fas fa-plus"></i></button>
+                                        <form method="GET" class="card__form collapse" id="demo__2">
+                                            <span class="font-opensans-semibold">Клиент</span>
+                                            <div class="card__form__body">
+
+                                                <label for="contact4" class="font-opensans-semibold">Контакт</label>
+
+                                                <div class="contact__member">
+                                                    <span class="fas fa-user-circle text-secondary"></span>
+                                                    <i class="liner"></i>
+                                                    <input type="text" id="contact4" placeholder="Имя контакта, телефон или e-mail">
+                                                    <span class="fas fa-search text-secondary"></span>
+                                                </div>
+
+                                                <p class="font-opensans-semibold"><i class="fas fa-plus"></i> Добавить участника</p>
+
+                                                <label for="company2" class="font-opensans-semibold">Компания</label>
+                                                <div class="contact__member">
+                                                    <span class="fas fa-building text-secondary"></span>
+                                                    <i class="liner"></i>
+                                                    <input type="text" id="company2" placeholder="Имя контакта, телефон или e-mail">
+                                                    <span class="fas fa-search text-secondary"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="card__form__footer">
+                                                <label for="name4" class="font-opensans-semibold">Название</label>
+                                                <input type="text" id="name4" placeholder="Сделка #">
+
+                                                <label for="timer4" class="font-opensans-semibold">Сумма и валюта</label>
+                                                <div class="d-flex time__bg">
+                                                    <input type="text" id="timer4" value="0.00">
+                                                    <select>
+                                                        <option value="1">Российский рубль</option>
+                                                        <option value="2">Доллар США</option>
+                                                        <option value="3">Евро</option>
+                                                        <option value="4">Гривна</option>
+                                                        <option value="5">Белорусский рубль</option>
+                                                    </select>
+
+
+                                                </div>
+                                                <span class="select__pole font-opensans-semibold">Выбрать поле</span>
+                                            </div>
+
+                                            <div class="submit__card d-flex">
+                                                <button>Сохранить</button>
+                                                <button>Отменить</button>
+                                            </div>
+
+                                        </form>
+                                    </div>
+
+                                    <div class="workarea__card">
+                                        <div class="workarea__card__header">
+                                            <span class="workarea__title">Название</span>
+                                            <span class="title__count font-weight-normal">0</span>
+                                            <i class="top__transparent purple"></i>
+                                            <div class="plus_area font-weight-bold">+</div>
+                                        </div>
+
+                                        <p class='font-opensans-regular'><span>0</span> руб.</p>
+
+                                        <button data-toggle="collapse" data-target="#demo__3"><i class="fas fa-plus"></i></button>
+                                        <form method="GET" class="card__form collapse" id="demo__3">
+                                            <span class="font-opensans-semibold">Клиент</span>
+                                            <div class="card__form__body">
+
+                                                <label for="contact2" class="font-opensans-semibold">Контакт</label>
+
+                                                <div class="contact__member">
+                                                    <span class="fas fa-user-circle text-secondary"></span>
+                                                    <i class="liner"></i>
+                                                    <input type="text" id="contact2" placeholder="Имя контакта, телефон или e-mail">
+                                                    <span class="fas fa-search text-secondary"></span>
+                                                </div>
+
+                                                <p class="font-opensans-semibold"><i class="fas fa-plus"></i> Добавить участника</p>
+
+                                                <label for="company1" class="font-opensans-semibold">Компания</label>
+                                                <div class="contact__member">
+                                                    <span class="fas fa-building text-secondary"></span>
+                                                    <i class="liner"></i>
+                                                    <input type="text" id="company1" placeholder="Имя контакта, телефон или e-mail">
+                                                    <span class="fas fa-search text-secondary"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="card__form__footer">
+                                                <label for="name1" class="font-opensans-semibold">Название</label>
+                                                <input type="text" id="name1" placeholder="Сделка #">
+
+                                                <label for="timer1" class="font-opensans-semibold">Сумма и валюта</label>
+                                                <div class="d-flex time__bg">
+                                                    <input type="text" id="timer1" value="0.00">
+                                                    <select>
+                                                        <option value="1">Российский рубль</option>
+                                                        <option value="2">Доллар США</option>
+                                                        <option value="3">Евро</option>
+                                                        <option value="4">Гривна</option>
+                                                        <option value="5">Белорусский рубль</option>
+                                                    </select>
+
+
+                                                </div>
+                                                <span class="select__pole font-opensans-semibold">Выбрать поле</span>
+                                            </div>
+
+                                            <div class="submit__card d-flex">
+                                                <button>Сохранить</button>
+                                                <button>Отменить</button>
+                                            </div>
+
+                                        </form>
+                                    </div>
+
+                                    <div class="workarea__card">
+                                        <div class="workarea__card__header">
+                                            <span class="workarea__title">Название</span>
+                                            <span class="title__count font-weight-normal">0</span>
+                                            <i class="top__transparent blue-green"></i>
+                                            <div class="plus_area font-weight-bold">+</div>
+                                        </div>
+
+                                        <p class='font-opensans-regular'><span>0</span> руб.</p>
+
+                                        <button data-toggle="collapse" data-target="#demo__4"><i class="fas fa-plus"></i></button>
+                                        <form method="GET" class="card__form collapse" id="demo__4">
+                                            <span class="font-opensans-semibold">Клиент</span>
+                                            <div class="card__form__body">
+
+                                                <label for="contact5" class="font-opensans-semibold">Контакт</label>
+
+                                                <div class="contact__member">
+                                                    <span class="fas fa-user-circle text-secondary"></span>
+                                                    <i class="liner"></i>
+                                                    <input type="text" id="contact5" placeholder="Имя контакта, телефон или e-mail">
+                                                    <span class="fas fa-search text-secondary"></span>
+                                                </div>
+
+                                                <p class="font-opensans-semibold"><i class="fas fa-plus"></i> Добавить участника</p>
+
+                                                <label for="company5" class="font-opensans-semibold">Компания</label>
+                                                <div class="contact__member">
+                                                    <span class="fas fa-building text-secondary"></span>
+                                                    <i class="liner"></i>
+                                                    <input type="text" id="company5" placeholder="Имя контакта, телефон или e-mail">
+                                                    <span class="fas fa-search text-secondary"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="card__form__footer">
+                                                <label for="name5" class="font-opensans-semibold">Название</label>
+                                                <input type="text" id="name5" placeholder="Сделка #">
+
+                                                <label for="timer5" class="font-opensans-semibold">Сумма и валюта</label>
+                                                <div class="d-flex time__bg">
+                                                    <input type="text" id="timer5" value="0.00">
+                                                    <select>
+                                                        <option value="1">Российский рубль</option>
+                                                        <option value="2">Доллар США</option>
+                                                        <option value="3">Евро</option>
+                                                        <option value="4">Гривна</option>
+                                                        <option value="5">Белорусский рубль</option>
+                                                    </select>
+
+
+                                                </div>
+                                                <span class="select__pole font-opensans-semibold">Выбрать поле</span>
+                                            </div>
+
+                                            <div class="submit__card d-flex">
+                                                <button>Сохранить</button>
+                                                <button>Отменить</button>
+                                            </div>
+
+                                        </form>
+                                    </div>
+
+                                    <div class="workarea__card">
+                                        <div class="workarea__card__header">
+                                            <span class="workarea__title">Название</span>
+                                            <span class="title__count font-weight-normal">0</span>
+                                            <i class="top__transparent dark-green"></i>
+                                            <div class="plus_area font-weight-bold">+</div>
+                                        </div>
+
+                                        <p class='font-opensans-regular'><span>0</span> руб.</p>
+
+                                        <button data-toggle="collapse" data-target="#demo__5"><i class="fas fa-plus"></i></button>
+                                        <form method="GET" class="card__form collapse" id="demo__5">
+                                            <span class="font-opensans-semibold">Клиент</span>
+                                            <div class="card__form__body">
+
+                                                <label for="contact6" class="font-opensans-semibold">Контакт</label>
+
+                                                <div class="contact__member">
+                                                    <span class="fas fa-user-circle text-secondary"></span>
+                                                    <i class="liner"></i>
+                                                    <input type="text" id="contact6" placeholder="Имя контакта, телефон или e-mail">
+                                                    <span class="fas fa-search text-secondary"></span>
+                                                </div>
+
+                                                <p class="font-opensans-semibold"><i class="fas fa-plus"></i> Добавить участника</p>
+
+                                                <label for="company3" class="font-opensans-semibold">Компания</label>
+                                                <div class="contact__member">
+                                                    <span class="fas fa-building text-secondary"></span>
+                                                    <i class="liner"></i>
+                                                    <input type="text" id="company3" placeholder="Имя контакта, телефон или e-mail">
+                                                    <span class="fas fa-search text-secondary"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="card__form__footer">
+                                                <label for="name2" class="font-opensans-semibold">Название</label>
+                                                <input type="text" id="name2" placeholder="Сделка #">
+
+                                                <label for="timer2" class="font-opensans-semibold">Сумма и валюта</label>
+                                                <div class="d-flex time__bg">
+                                                    <input type="text" id="timer2" value="0.00">
+                                                    <select>
+                                                        <option value="1">Российский рубль</option>
+                                                        <option value="2">Доллар США</option>
+                                                        <option value="3">Евро</option>
+                                                        <option value="4">Гривна</option>
+                                                        <option value="5">Белорусский рубль</option>
+                                                    </select>
+
+
+                                                </div>
+                                                <span class="select__pole font-opensans-semibold">Выбрать поле</span>
+                                            </div>
+
+                                            <div class="submit__card d-flex">
+                                                <button>Сохранить</button>
+                                                <button>Отменить</button>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </main>
+                            </div>
+
+
+                            <div class="right__nav" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+                                data-aos-duration="500">
+                                <ul>
+                                    <li><a href="#"><span><i class="fas fa-question-circle text__white"></i></span></a></li>
+                                    <li><a href="#"><span><i class="fas fa-bell text__white"></i></span></a></li>
+                                    <li><a href="#"><span><i class="fas fa-search  text__white"></i></span></a></li>
+                                    <li><a href="#"><span><i class="fas fa-adjust text__white"></i></span></a></li>
+                                    <li><a href="#"><span class="user__name"><i class="fas fa-user text__white"></i></span></a></li>
+                                </ul>
+
+                                <ul class="log__out">
+                                    <li><a href=""><span class="telephone bg-success"><i class="fas fa-phone text__white"></i></span></a>
+                                    </li>
+                                    <li><a href=""><span><i class="fas fa-sign-out-alt text__white"></i></span></a></li>
+                                </ul>
+                            </div>
+
+                                </div>
+                            </main>
+                        </div>
+
+
+                        <div class="right__nav">
+                            <ul>
+                                <li><a href="#"><span><i class="fas fa-question-circle text__white"></i></span></a></li>
+                                <li><a href="#"><span><i class="fas fa-bell text__white"></i></span></a></li>
+                                <li><a href="#"><span><i class="fas fa-search  text__white"></i></span></a></li>
+                                <li><a href="#"><span><i class="fas fa-adjust text__white"></i></span></a></li>
+                                <li><a href="#"><span class="user__name"><i class="fas fa-user text__white"></i></span></a></li>
+                            </ul>
+
+                            <ul class="log__out">
+                                <li><a href=""><span class="telephone bg-success"><i class="fas fa-phone text__white"></i></span></a>
+                                </li>
+                                <li><a href=""><span><i class="fas fa-sign-out-alt text__white"></i></span></a></li>
+                            </ul>
+                        </div>
+                        <script>
 
                     </div>
 
-                <div class="workarea__card"> 
-                        <div class="workarea__card__header">
-                            <span class="workarea__title">Название</span>
-                            <span class="title__count font-weight-normal">0</span>
-                            <i class="top__transparent blue"></i>
-                            <div class="plus_area font-weight-bold" onclick="">+</div>
-                        </div>
 
-                        <p class='font-opensans-regular'><span>0</span> руб.</p>
-
-                        <button class="main accordion"><i class="fas fa-plus"></i>
-                            </button>
-
-                        <form action="#" method="get" class="card__form panel">
-
-                            <label for="name" class="font-opensans-semibold">Название</label>
-                            <input type="text" id="name" placeholder="Сделка #" name="agreement">
-
-
-                            <span class="font-opensans-semibold">Клиент</span>
-                         
-                             <div class="card__form__body"> 
-
-                                <label for="contact" class="font-opensans-semibold">Контакт</label>
-
-                                <div class="contact__member">
-                                    <span class="fas fa-user-circle text-secondary"></span>
-                                    <i class="liner"></i>
-                                    <input type="text" id="contact" name="tel"  placeholder="Имя контакта, телефон или e-mail">
-                                    <span class="fas fa-search text-secondary"></span>
-                                </div> 
-
-                              <p class="font-opensans-semibold"><i class="fas fa-plus"></i> Добавить участника</p>
-
-                                <label for="company" class="font-opensans-semibold">Компания</label>
-                                <div class="contact__member">
-                                    <span class="fas fa-building text-secondary"></span>
-                                    <i class="liner"></i>
-                                    <input type="text" id="company" name="company_tel" placeholder="Название компании, телефон или e-mail">
-                                    <span class="fas fa-search text-secondary"></span>
-                                </div> 
-                             </div> 
-                             <div class="card__form__footer"> 
-                            
-
-                                <label for="timer" class="font-opensans-semibold">Сумма и валюта</label>
-                                <div class="d-flex time__bg">
-                                    <input type="number" id="timer" value="0.00" name="currency">
-                                    <select>
-                                        <option value="1">Российский рубль</option>
-                                        <option value="2">Доллар США</option>
-                                        <option value="3">Евро</option>
-                                        <option value="4">Гривна</option>
-                                        <option value="5">Белорусский рубль</option>
-                                    </select>                        </div>
-                                <span class="select__pole font-opensans-semibold">Выбрать поле</span> 
-                           </div> 
-
-                            <div class="submit__card d-flex">
-                                <button type="submit">Сохранить</button>
-                                <button type="reset">Отменить</button>
-                            </div>
-
-                        </form>
-
-
-                    </div>
-
-                <div class="workarea__card"> 
-                        <div class="workarea__card__header">
-                            <span class="workarea__title">Название</span>
-                            <span class="title__count font-weight-normal">0</span>
-                            <i class="top__transparent blue"></i>
-                            <div class="plus_area font-weight-bold" onclick="workListFunction()">+</div>
-                        </div>
-
-                        <p class='font-opensans-regular'><span>0</span> руб.</p>
-
-                        <button class="main accordion"><i class="fas fa-plus"></i>
-                            </button>
-
-                        <form action="#" method="get" class="card__form panel">
-
-                            <label for="name" class="font-opensans-semibold">Название</label>
-                            <input type="text" id="name" placeholder="Сделка #" name="agreement">
-
-
-                            <span class="font-opensans-semibold">Клиент</span>
-                         
-                             <div class="card__form__body"> 
-
-                                <label for="contact" class="font-opensans-semibold">Контакт</label>
-
-                                <div class="contact__member">
-                                    <span class="fas fa-user-circle text-secondary"></span>
-                                    <i class="liner"></i>
-                                    <input type="text" id="contact" name="tel"  placeholder="Имя контакта, телефон или e-mail">
-                                    <span class="fas fa-search text-secondary"></span>
-                                </div> 
-
-                              <p class="font-opensans-semibold"><i class="fas fa-plus"></i> Добавить участника</p>
-
-                                <label for="company" class="font-opensans-semibold">Компания</label>
-                                <div class="contact__member">
-                                    <span class="fas fa-building text-secondary"></span>
-                                    <i class="liner"></i>
-                                    <input type="text" id="company" name="company_tel" placeholder="Название компании, телефон или e-mail">
-                                    <span class="fas fa-search text-secondary"></span>
-                                </div> 
-                             </div> 
-                             <div class="card__form__footer"> 
-                              
-                                <label for="timer" class="font-opensans-semibold">Сумма и валюта</label>
-                                <div class="d-flex time__bg">
-                                    <input type="number" id="timer" value="0.00" name="currency">
-                                    <select>
-                                        <option value="1">Российский рубль</option>
-                                        <option value="2">Доллар США</option>
-                                        <option value="3">Евро</option>
-                                        <option value="4">Гривна</option>
-                                        <option value="5">Белорусский рубль</option>
-                                    </select>                        </div>
-                                <span class="select__pole font-opensans-semibold">Выбрать поле</span> 
-                           </div> 
-
-                            <div class="submit__card d-flex">
-                                <button type="submit">Сохранить</button>
-                                <button type="reset">Отменить</button>
-                            </div>
-
-                        </form>
-
-
-                    </div>
-
-                <div class="workarea__card"> 
-                        <div class="workarea__card__header">
-                            <span class="workarea__title">Название</span>
-                            <span class="title__count font-weight-normal">0</span>
-                            <i class="top__transparent blue"></i>
-                            <div class="plus_area font-weight-bold" onclick="workListFunction()">+</div>
-                        </div>
-
-                        <p class='font-opensans-regular'><span>0</span> руб.</p>
-
-                        <button class="main accordion"><i class="fas fa-plus"></i>
-                            </button>
-
-                        <form action="#" method="get" class="card__form panel">
-
-                            <label for="name" class="font-opensans-semibold">Название</label>
-                            <input type="text" id="name" placeholder="Сделка #" name="agreement">
-
-                            <span class="font-opensans-semibold">Клиент</span>
-                         
-                             <div class="card__form__body"> 
-
-                                <label for="contact" class="font-opensans-semibold">Контакт</label>
-
-                                <div class="contact__member">
-                                    <span class="fas fa-user-circle text-secondary"></span>
-                                    <i class="liner"></i>
-                                    <input type="text" id="contact" name="tel"  placeholder="Имя контакта, телефон или e-mail">
-                                    <span class="fas fa-search text-secondary"></span>
-                                </div> 
-
-                              <p class="font-opensans-semibold"><i class="fas fa-plus"></i> Добавить участника</p>
-
-                                <label for="company" class="font-opensans-semibold">Компания</label>
-                                <div class="contact__member">
-                                    <span class="fas fa-building text-secondary"></span>
-                                    <i class="liner"></i>
-                                    <input type="text" id="company" name="company_tel" placeholder="Название компании, телефон или e-mail">
-                                    <span class="fas fa-search text-secondary"></span>
-                                </div> 
-                             </div> 
-                             <div class="card__form__footer"> 
-                         
-
-                                <label for="timer" class="font-opensans-semibold">Сумма и валюта</label>
-                                <div class="d-flex time__bg">
-                                    <input type="number" id="timer" value="0.00" name="currency">
-                                    <select>
-                                        <option value="1">Российский рубль</option>
-                                        <option value="2">Доллар США</option>
-                                        <option value="3">Евро</option>
-                                        <option value="4">Гривна</option>
-                                        <option value="5">Белорусский рубль</option>
-                                    </select>                        </div>
-                                <span class="select__pole font-opensans-semibold">Выбрать поле</span> 
-                           </div> 
-
-                            <div class="submit__card d-flex">
-                                <button type="submit">Сохранить</button>
-                                <button type="reset">Отменить</button>
-                            </div>
-
-                        </form>
-
-
-                    </div>
-
-
-
-                    <!-- <div id="main-workarea" class="main-work-cards"></div> -->
-                    <!-- <div class="workarea__card">
-                        <div class="workarea__card__header">
-                            <span class="workarea__title">Название</span>
-                            <span class="title__count font-weight-normal">0</span>
-                            <i class="top__transparent green"></i>
-                            <div class="plus_area font-weight-bold">+</div>
-                        </div>
-
-                        <p class='font-opensans-regular'><span>0</span> руб.</p>
-
-                        <button data-toggle="collapse" data-target="#demo__2"><i class="fas fa-plus"></i></button>
-                        <form method="GET" class="card__form collapse" id="demo__2">
-                            <span class="font-opensans-semibold">Клиент</span>
-                            <div class="card__form__body">
-
-                                <label for="contact" class="font-opensans-semibold">Контакт</label>
-
-                                <div class="contact__member">
-                                    <span class="fas fa-user-circle text-secondary"></span>
-                                    <i class="liner"></i>
-                                    <input type="text" id="contact" placeholder="Имя контакта, телефон или e-mail">
-                                    <span class="fas fa-search text-secondary"></span>
-                                </div>
-
-                                <p class="font-opensans-semibold"><i class="fas fa-plus"></i> Добавить участника</p>
-
-                                <label for="company" class="font-opensans-semibold">Компания</label>
-                                <div class="contact__member">
-                                    <span class="fas fa-building text-secondary"></span>
-                                    <i class="liner"></i>
-                                    <input type="text" id="company" placeholder="Имя контакта, телефон или e-mail">
-                                    <span class="fas fa-search text-secondary"></span>
-                                </div>
-                            </div>
-
-                            <div class="card__form__footer">
-                                <label for="name" class="font-opensans-semibold">Название</label>
-                                <input type="text" id="name" placeholder="Сделка #">
-
-                                <label for="timer" class="font-opensans-semibold">Сумма и валюта</label>
-                                <div class="d-flex time__bg">
-                                    <input type="text" id="timer" value="0.00">
-                                    <select>
-                                        <option value="1">Российский рубль</option>
-                                        <option value="2">Доллар США</option>
-                                        <option value="3">Евро</option>
-                                        <option value="4">Гривна</option>
-                                        <option value="5">Белорусский рубль</option>
-                                    </select>
-
-
-
-                                </div>
-                                <span class="select__pole font-opensans-semibold">Выбрать поле</span>
-                            </div>
-
-                            <div class="submit__card d-flex">
-                                <button>Сохранить</button>
-                                <button>Отменить</button>
-                            </div>
-
-                        </form>
-                    </div>
-
-                    <div class="workarea__card">
-                        <div class="workarea__card__header">
-                            <span class="workarea__title">Название</span>
-                            <span class="title__count font-weight-normal">0</span>
-                            <i class="top__transparent purple"></i>
-                            <div class="plus_area font-weight-bold">+</div>
-                        </div>
-
-                        <p class='font-opensans-regular'><span>0</span> руб.</p>
-
-                        <button data-toggle="collapse" data-target="#demo__3"><i class="fas fa-plus"></i></button>
-                        <form method="GET" class="card__form collapse" id="demo__3">
-                            <span class="font-opensans-semibold">Клиент</span>
-                            <div class="card__form__body">
-
-                                <label for="contact" class="font-opensans-semibold">Контакт</label>
-
-                                <div class="contact__member">
-                                    <span class="fas fa-user-circle text-secondary"></span>
-                                    <i class="liner"></i>
-                                    <input type="text" id="contact" placeholder="Имя контакта, телефон или e-mail">
-                                    <span class="fas fa-search text-secondary"></span>
-                                </div>
-                            
-                                <p class="font-opensans-semibold"><i class="fas fa-plus"></i> Добавить участника</p>
-
-                                <label for="company" class="font-opensans-semibold">Компания</label>
-                                <div class="contact__member">
-                                    <span class="fas fa-building text-secondary"></span>
-                                    <i class="liner"></i>
-                                    <input type="text" id="company" placeholder="Имя контакта, телефон или e-mail">
-                                    <span class="fas fa-search text-secondary"></span>
-                                </div>
-                            </div>
-
-                            <div class="card__form__footer">
-                                <label for="name" class="font-opensans-semibold">Название</label>
-                                <input type="text" id="name" placeholder="Сделка #">
-
-                                <label for="timer" class="font-opensans-semibold">Сумма и валюта</label>
-                                <div class="d-flex time__bg">
-                                    <input type="text" id="timer" value="0.00">
-                                    <select>
-                                        <option value="1">Российский рубль</option>
-                                        <option value="2">Доллар США</option>
-                                        <option value="3">Евро</option>
-                                        <option value="4">Гривна</option>
-                                        <option value="5">Белорусский рубль</option>
-                                    </select>
-
-
-
-                                </div>
-                                <span class="select__pole font-opensans-semibold">Выбрать поле</span>
-                            </div>
-
-                            <div class="submit__card d-flex">
-                                <button>Сохранить</button>
-                                <button>Отменить</button>
-                            </div>
-
-                        </form>
-                    </div>
-
-                    <div class="workarea__card">
-                        <div class="workarea__card__header">
-                            <span class="workarea__title">Название</span>
-                            <span class="title__count font-weight-normal">0</span>
-                            <i class="top__transparent blue-green"></i>
-                            <div class="plus_area font-weight-bold">+</div>
-                        </div>
-
-                        <p class='font-opensans-regular'><span>0</span> руб.</p>
-
-                        <button data-toggle="collapse" data-target="#demo__4"><i class="fas fa-plus"></i> </button>
-                        <form method="GET" class="card__form collapse" id="demo__4">
-                            <span class="font-opensans-semibold">Клиент</span>
-                            <div class="card__form__body">
-
-                                <label for="contact" class="font-opensans-semibold">Контакт</label>
-
-                                <div class="contact__member">
-                                    <span class="fas fa-user-circle text-secondary"></span>
-                                    <i class="liner"></i>
-                                    <input type="text" id="contact" placeholder="Имя контакта, телефон или e-mail">
-                                    <span class="fas fa-search text-secondary"></span>
-                                </div>
-
-                                <p class="font-opensans-semibold"><i class="fas fa-plus"></i> Добавить участника</p>
-
-                                <label for="company" class="font-opensans-semibold">Компания</label>
-                                <div class="contact__member">
-                                    <span class="fas fa-building text-secondary"></span>
-                                    <i class="liner"></i>
-                                    <input type="text" id="company" placeholder="Имя контакта, телефон или e-mail">
-                                    <span class="fas fa-search text-secondary"></span>
-                                </div>
-                            </div>
-
-                            <div class="card__form__footer">
-                                <label for="name" class="font-opensans-semibold">Название</label>
-                                <input type="text" id="name" placeholder="Сделка #">
-
-                                <label for="timer" class="font-opensans-semibold">Сумма и валюта</label>
-                                <div class="d-flex time__bg">
-                                    <input type="text" id="timer" value="0.00">
-                                    <select>
-                                        <option value="1">Российский рубль</option>
-                                        <option value="2">Доллар США</option>
-                                        <option value="3">Евро</option>
-                                        <option value="4">Гривна</option>
-                                        <option value="5">Белорусский рубль</option>
-                                    </select>
-
-
-
-                                </div>
-                                <span class="select__pole font-opensans-semibold">Выбрать поле</span>
-                            </div>
-
-                            <div class="submit__card d-flex">
-                                <button>Сохранить</button>
-                                <button>Отменить</button>
-                            </div>
-
-                        </form>
-                    </div>
-
-                    <div class="workarea__card">
-                        <div class="workarea__card__header">
-                            <span class="workarea__title">Название</span>
-                            <span class="title__count font-weight-normal">0</span>
-                            <i class="top__transparent dark-green"></i>
-                            <div class="plus_area font-weight-bold">+</div>
-                        </div>
-
-                        <p class='font-opensans-regular'><span>0</span> руб.</p>
-
-                        <button data-toggle="collapse" data-target="#demo__5"><i class="fas fa-plus"></i> </button>
-                        <form method="GET" class="card__form collapse" id="demo__5">
-                            <span class="font-opensans-semibold">Клиент</span>
-                            <div class="card__form__body">
-
-                                <label for="contact" class="font-opensans-semibold">Контакт</label>
-
-                                <div class="contact__member">
-                                    <span class="fas fa-user-circle text-secondary"></span>
-                                    <i class="liner"></i>
-                                    <input type="text" id="contact" placeholder="Имя контакта, телефон или e-mail">
-                                    <span class="fas fa-search text-secondary"></span>
-                                </div>
-
-                                <p class="font-opensans-semibold"><i class="fas fa-plus"></i> Добавить участника</p>
-
-                                <label for="company" class="font-opensans-semibold">Компания</label>
-                                <div class="contact__member">
-                                    <span class="fas fa-building text-secondary"></span>
-                                    <i class="liner"></i>
-                                    <input type="text" id="company" placeholder="Имя контакта, телефон или e-mail">
-                                    <span class="fas fa-search text-secondary"></span>
-                                </div>
-                            </div>
-
-                            <div class="card__form__footer">
-                                <label for="name" class="font-opensans-semibold">Название</label>
-                                <input type="text" id="name" placeholder="Сделка #">
-
-                                <label for="timer" class="font-opensans-semibold">Сумма и валюта</label>
-                                <div class="d-flex time__bg">
-                                    <input type="text" id="timer" value="0.00">
-                                    <select>
-                                        <option value="1">Российский рубль</option>
-                                        <option value="2">Доллар США</option>
-                                        <option value="3">Евро</option>
-                                        <option value="4">Гривна</option>
-                                        <option value="5">Белорусский рубль</option>
-                                    </select>
-
-
-
-                                </div>
-                                <span class="select__pole font-opensans-semibold">Выбрать поле</span>
-                            </div>
-
-                            <div class="submit__card d-flex">
-                                <button>Сохранить</button>
-                                <button>Отменить</button>
-                            </div>
-
-                        </form>
-                    </div>
-
-                    <div class="workarea__card">
-                        <div class="workarea__card__header">
-                            <span class="workarea__title">Название</span>
-                            <span class="title__count font-weight-normal">0</span>
-                            <i class="top__transparent darkpink"></i>
-                            <div class="plus_area font-weight-bold">+</div>
-                        </div>
-
-                        <p class='font-opensans-regular'><span>0</span> руб.</p>
-
-                        <button data-toggle="collapse" data-target="#demo__6"><i class="fas fa-plus"></i> </button>
-                        <form method="GET" class="card__form collapse" id="demo__6">
-                            <span class="font-opensans-semibold">Клиент</span>
-                            <div class="card__form__body">
-
-                                <label for="contact" class="font-opensans-semibold">Контакт</label>
-
-                                <div class="contact__member">
-                                    <span class="fas fa-user-circle text-secondary"></span>
-                                    <i class="liner"></i>
-                                    <input type="text" id="contact" placeholder="Имя контакта, телефон или e-mail">
-                                    <span class="fas fa-search text-secondary"></span>
-                                </div>
-
-                                <p class="font-opensans-semibold"><i class="fas fa-plus"></i> Добавить участника</p>
-
-                                <label for="company" class="font-opensans-semibold">Компания</label>
-                                <div class="contact__member">
-                                    <span class="fas fa-building text-secondary"></span>
-                                    <i class="liner"></i>
-                                    <input type="text" id="company" placeholder="Имя контакта, телефон или e-mail">
-                                    <span class="fas fa-search text-secondary"></span>
-                                </div>
-                            </div>
-
-                            <div class="card__form__footer">
-                                <label for="name" class="font-opensans-semibold">Название</label>
-                                <input type="text" id="name" placeholder="Сделка #">
-
-                                <label for="timer" class="font-opensans-semibold">Сумма и валюта</label>
-                                <div class="d-flex time__bg">
-                                    <input type="text" id="timer" value="0.00">
-                                    <select>
-                                        <option value="1">Российский рубль</option>
-                                        <option value="2">Доллар США</option>
-                                        <option value="3">Евро</option>
-                                        <option value="4">Гривна</option>
-                                        <option value="5">Белорусский рубль</option>
-                                    </select>
-
-
-
-                                </div>
-                                <span class="select__pole font-opensans-semibold">Выбрать поле</span>
-                            </div>
-
-                            <div class="submit__card d-flex">
-                                <button>Сохранить</button>
-                                <button>Отменить</button>
-                            </div>
-
-                        </form>
-                    </div>          -->
-
-                </div>
-            </main>
-        </div>
-
-
-        <div class="right__nav" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
-            data-aos-duration="500">
-            <ul>
-                <li><a href="#"><span><i class="fas fa-question-circle text__white"></i></span></a></li>
-                <li><a href="#"><span><i class="fas fa-bell text__white"></i></span></a></li>
-                <li><a href="#"><span><i class="fas fa-search  text__white"></i></span></a></li>
-                <li><a href="#"><span><i class="fas fa-adjust text__white"></i></span></a></li>
-                <li><a href="#"><span class="user__name"><i class="fas fa-user text__white"></i></span></a></li>
-            </ul>
-
-            <ul class="log__out">
-                <li><a href=""><span class="telephone bg-success"><i class="fas fa-phone text__white"></i></span></a>
-                </li>
-                <li><a href=""><span><i class="fas fa-sign-out-alt text__white"></i></span></a></li>
-            </ul>
-        </div>
-
-    </div>
-    <script>
-
-    </script>
-    <script src="aos-master/aos-master/dist/aos.js"></script>
-    <script src="./js/brands.js"></script>
-    <script src="./js/all.js"></script>
-    <script src="./js/fontawesome.js"></script>
-    <script src="./js/solid.js"></script>
-    <script src="./js/regular.js"></script>
-    
-    <!-- <script src="./js/jquery-3.3.1.slim.min.js"></script> -->
-    <script src='./js/popper.min.js'> </script>
-    <script src="./js/bootstrap.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./js/main.js"></script>
+                    <script src="./js/brands.js"></script>
+                    <script src="./js/all.js"></script>
+                    <script src="./js/fontawesome.js"></script>
+                    <script src="./js/solid.js"></script>
+                    <script src="./js/regular.js"></script>
+                    <script src="./js/jquery-3.3.1.slim.min.js"></script>
+                    <script src="js/popper.min.js"></script>
+                    <script src="./js/bootstrap.js"></script>
+                    <script src="./js/main.js"></script>
+                        </script>
+                        <script src="aos-master/aos-master/dist/aos.js"></script>
+                        <script src="./js/brands.js"></script>
+                        <script src="./js/all.js"></script>
+                        <script src="./js/fontawesome.js"></script>
+                        <script src="./js/solid.js"></script>
+                        <script src="./js/regular.js"></script>
+
+                                        <script src='./js/popper.min.js'></script>
+                                        <script src="./js/bootstrap.js"></script>
+                                        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                                        <script src="./js/main.js"></script>
 
 
 </body>
