@@ -436,9 +436,9 @@ nav .clock:hover,
      box-shadow: 0 0 3px grey;
  }
 .bgblue .bg-white{
-    font-size: 10px;
-    width: 65px;
-    height: 16px;
+    font-size: 12px;
+    width: 80px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
